@@ -1,0 +1,1788 @@
+{
+  "Aston Martin": [
+    {
+      "id": 1,
+      "company": "Aston Martin",
+      "carModel": "DB-II",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "Aston Martin",
+      "carModel": "DBX",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Aston Martin",
+      "carModel": "Vantage",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Audi": [
+    {
+      "id": 1,
+      "company": "Audi",
+      "carModel": "A3",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Audi",
+      "carModel": "A4",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Audi",
+      "carModel": "A6",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Audi",
+      "carModel": "A8L",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "Audi",
+      "carModel": "e-Trongt",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Audi",
+      "carModel": "Q3",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "Audi",
+      "carModel": "Q3 Sports Back",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 8,
+      "company": "Audi",
+      "carModel": "Q5",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "Audi",
+      "carModel": "Q7",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 10,
+      "company": "Audi",
+      "carModel": "Q8",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 11,
+      "company": "Audi",
+      "carModel": "RSQ8",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 12,
+      "company": "Audi",
+      "carModel": "RS5",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 13,
+      "company": "Audi",
+      "carModel": "S5 Sprots Back",
+      "carModelType": "Coupe"
+    }
+  ],
+  "BMW": [
+    {
+      "id": 1,
+      "company": "BMW",
+      "carModel": "2 Series",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "BMW",
+      "carModel": "3 Series",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "BMW",
+      "carModel": "5 Series",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "BMW",
+      "carModel": "6 Series",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "BMW",
+      "carModel": "7 Series",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 6,
+      "company": "BMW",
+      "carModel": "I4",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 7,
+      "company": "BMW",
+      "carModel": "I7",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 8,
+      "company": "BMW",
+      "carModel": "iX",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "BMW",
+      "carModel": "M2",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 10,
+      "company": "BMW",
+      "carModel": "M340i",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 11,
+      "company": "BMW",
+      "carModel": "M4",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 12,
+      "company": "BMW",
+      "carModel": "M5",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 13,
+      "company": "BMW",
+      "carModel": "M8",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 14,
+      "company": "BMW",
+      "carModel": "X1",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 15,
+      "company": "BMW",
+      "carModel": "X3",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 16,
+      "company": "BMW",
+      "carModel": "X5",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 17,
+      "company": "BMW",
+      "carModel": "X7",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 18,
+      "company": "BMW",
+      "carModel": "XM",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 19,
+      "company": "BMW",
+      "carModel": "Z4",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Bentley": [
+    {
+      "id": 1,
+      "company": "Bentley",
+      "carModel": "Bentagya",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Bentley",
+      "carModel": "Flying Spur",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Bentley",
+      "carModel": "Continental",
+      "carModelType": "Coupe"
+    }
+  ],
+  "BYD": [
+    {
+      "id": 1,
+      "company": "BYD",
+      "carModel": "Atto-3",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "BYD",
+      "carModel": "E-6",
+      "carModelType": "MVP"
+    }
+  ],
+  "Citeron": [
+    {
+      "id": 1,
+      "company": "Citeron",
+      "carModel": "C3",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 2,
+      "company": "Citeron",
+      "carModel": "C5-AirCross",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Citeron",
+      "carModel": "EC3",
+      "carModelType": "SUV"
+    }
+  ],
+  "Ferreri": [
+    {
+      "id": 1,
+      "company": "Ferreri",
+      "carModel": "F8",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "Ferreri",
+      "carModel": "Portofino",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 3,
+      "company": "Ferreri",
+      "carModel": "Roma",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Ford": [
+    {
+      "id": 1,
+      "company": "Ford",
+      "carModel": "Aspire",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Ford",
+      "carModel": "EcoSport",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Ford",
+      "carModel": "Endeavour",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Ford",
+      "carModel": "Escort",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "Ford",
+      "carModel": "Falcon",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 6,
+      "company": "Ford",
+      "carModel": "Fiesta",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 7,
+      "company": "Ford",
+      "carModel": "Figo",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 8,
+      "company": "Ford",
+      "carModel": "FreeStyle",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "Ford",
+      "carModel": "Fusion",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 10,
+      "company": "Ford",
+      "carModel": "Ikon",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 11,
+      "company": "Ford",
+      "carModel": "Mondeo",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 12,
+      "company": "Ford",
+      "carModel": "Mustang",
+      "carModelType": "Sedan"
+    },
+    {
+      "company": "Ford"
+    },
+    {
+      "company": "Ford"
+    }
+  ],
+  "Force Motor": [
+    {
+      "id": 1,
+      "company": "Force Motor",
+      "carModel": "Gyrkha",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Force Motor",
+      "carModel": "Tracx Cruiser",
+      "carModelType": "SUV"
+    }
+  ],
+  "Honda": [
+    {
+      "id": 1,
+      "company": "Honda",
+      "carModel": "Amaze",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Honda",
+      "carModel": "City-New",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Honda",
+      "carModel": "City-Hyd",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Honda",
+      "carModel": "EHEV",
+      "carModelType": "Sedan"
+    }
+  ],
+  "Hyandai": [
+    {
+      "id": 1,
+      "company": "Hyandai",
+      "carModel": "Alcazar",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Hyandai",
+      "carModel": "Aura",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Hyandai",
+      "carModel": "Creta",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Hyandai",
+      "carModel": "Grand i10 Nios",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 5,
+      "company": "Hyandai",
+      "carModel": "i20 Nline",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 6,
+      "company": "Hyandai",
+      "carModel": "i20",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 7,
+      "company": "Hyandai",
+      "carModel": "Ioniq 5",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 8,
+      "company": "Hyandai",
+      "carModel": "Kona-ev",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "Hyandai",
+      "carModel": "Tucson",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 10,
+      "company": "Hyandai",
+      "carModel": "Venue",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 11,
+      "company": "Hyandai",
+      "carModel": "Verna",
+      "carModelType": "Sedan"
+    }
+  ],
+  "ISUZU": [
+    {
+      "id": 1,
+      "company": "ISUZU",
+      "carModel": "D-Max",
+      "carModelType": "Truck"
+    },
+    {
+      "id": 2,
+      "company": "ISUZU",
+      "carModel": "MU-X",
+      "carModelType": "MVP"
+    }
+  ],
+  "Jaguar": [
+    {
+      "id": 1,
+      "company": "Jaguar",
+      "carModel": "XF",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Jaguar",
+      "carModel": "F-Pace",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Jaguar",
+      "carModel": "F-Type",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 4,
+      "company": "Jaguar",
+      "carModel": "i-Face",
+      "carModelType": "SUV"
+    }
+  ],
+  "Jeep": [
+    {
+      "id": 1,
+      "company": "Jeep",
+      "carModel": "Compass",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Jeep",
+      "carModel": "Grand-Cherokw",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Jeep",
+      "carModel": "Meridian",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Jeep",
+      "carModel": "Wrangler",
+      "carModelType": "SUV"
+    },
+    {
+      "company": "Jeep",
+      "carModel": "Trailhawk",
+      "carModelType": "SUV"
+    }
+  ],
+  "KIA": [
+    {
+      "id": 1,
+      "company": "KIA",
+      "carModel": "Carnival",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 2,
+      "company": "KIA",
+      "carModel": "Cavens",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 3,
+      "company": "KIA",
+      "carModel": "EV-6",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "KIA",
+      "carModel": "Seltos",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "KIA",
+      "carModel": "Sonet",
+      "carModelType": "SUV"
+    }
+  ],
+  "Lamborghnini": [
+    {
+      "id": 1,
+      "company": "Lamborghnini",
+      "carModel": "Huracan-evo Spider",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "Lamborghnini",
+      "carModel": "Huracan-ST O",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 3,
+      "company": "Lamborghnini",
+      "carModel": "Huracan-Techica",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 4,
+      "company": "Lamborghnini",
+      "carModel": "Hurcaneo",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 5,
+      "company": "Lamborghnini",
+      "carModel": "URUS-Perforante",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Lamborghnini",
+      "carModel": "URUS-S",
+      "carModelType": "SUV"
+    }
+  ],
+  "Land Rover": [
+    {
+      "id": 1,
+      "company": "Land Rover",
+      "carModel": "Defender",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Land Rover",
+      "carModel": "Discovery ",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Land Rover",
+      "carModel": "Discovery Sport",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Land Rover",
+      "carModel": "Range Rover",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "Land Rover",
+      "carModel": "Range Rover Evoque",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Land Rover",
+      "carModel": "Range Rover Sport",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "Land Rover",
+      "carModel": "Range Rover Velar",
+      "carModelType": "SUV"
+    }
+  ],
+  "Lexus": [
+    {
+      "id": 1,
+      "company": "Lexus",
+      "carModel": "500H",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "Lexus",
+      "carModel": "ES",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Lexus",
+      "carModel": "LC",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 4,
+      "company": "Lexus",
+      "carModel": "LS",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "Lexus",
+      "carModel": "LX",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Lexus",
+      "carModel": "NX",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "Lexus",
+      "carModel": "RX",
+      "carModelType": "SUV"
+    }
+  ],
+  "Mastrati": [
+    {
+      "id": 1,
+      "company": "Mastrati",
+      "carModel": "Ghibli",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Mastrati",
+      "carModel": "LEVANTE",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Mastrati",
+      "carModel": "GranTurismo",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 4,
+      "company": "Mastrati",
+      "carModel": "Qattroeorte",
+      "carModelType": "Sedan"
+    }
+  ],
+  "Maruti Suzuki": [
+    {
+      "id": 1,
+      "company": "Maruti Suzuki",
+      "carModel": "Alto 800",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 2,
+      "company": "Maruti Suzuki",
+      "carModel": "Alto K-10",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 3,
+      "company": "Maruti Suzuki",
+      "carModel": "Baleno",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 4,
+      "company": "Maruti Suzuki",
+      "carModel": "Brezza",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "Maruti Suzuki",
+      "carModel": "Ciaz",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 6,
+      "company": "Maruti Suzuki",
+      "carModel": "Celerio",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 7,
+      "company": "Maruti Suzuki",
+      "carModel": "EECO",
+      "carModelType": "MiniVan"
+    },
+    {
+      "id": 8,
+      "company": "Maruti Suzuki",
+      "carModel": "Ertigo",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 9,
+      "company": "Maruti Suzuki",
+      "carModel": "Fronx",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 10,
+      "company": "Maruti Suzuki",
+      "carModel": "Grand Vitara",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 11,
+      "company": "Maruti Suzuki",
+      "carModel": "Ignis",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 12,
+      "company": "Maruti Suzuki",
+      "carModel": "Jimmy",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 13,
+      "company": "Maruti Suzuki",
+      "carModel": "S-Presso",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 14,
+      "company": "Maruti Suzuki",
+      "carModel": "Swift",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 15,
+      "company": "Maruti Suzuki",
+      "carModel": "Swift Dezire",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 16,
+      "company": "Maruti Suzuki",
+      "carModel": "Wagon",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 17,
+      "company": "Maruti Suzuki",
+      "carModel": "XL6",
+      "carModelType": "MUV"
+    }
+  ],
+  "McLarn": [
+    {
+      "id": 1,
+      "company": "McLarn",
+      "carModel": "720S",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "McLarn",
+      "carModel": "GT",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Mahindra": [
+    {
+      "id": 1,
+      "company": "Mahindra",
+      "carModel": "Bolero",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Mahindra",
+      "carModel": "Bolero-Neo",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Mahindra",
+      "carModel": "E Verito",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Mahindra",
+      "carModel": "KUV-100 NXT",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 5,
+      "company": "Mahindra",
+      "carModel": "Marazzo",
+      "carModelType": "MPV"
+    },
+    {
+      "id": 6,
+      "company": "Mahindra",
+      "carModel": "Scorpio",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "Mahindra",
+      "carModel": "Scropio-N",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 8,
+      "company": "Mahindra",
+      "carModel": "Thar",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "Mahindra",
+      "carModel": "TUV",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 10,
+      "company": "Mahindra",
+      "carModel": "XUV-300",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 11,
+      "company": "Mahindra",
+      "carModel": "XUV-300 TS",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 12,
+      "company": "Mahindra",
+      "carModel": "XUV-400",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 13,
+      "company": "Mahindra",
+      "carModel": "XUV-700",
+      "carModelType": "SUV"
+    }
+  ],
+  "MG": [
+    {
+      "id": 1,
+      "company": "MG",
+      "carModel": "Astor",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "MG",
+      "carModel": "Comet-EV",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 3,
+      "company": "MG",
+      "carModel": "Gloster",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "MG",
+      "carModel": "Hector",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "MG",
+      "carModel": "Hector Plus",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "MG",
+      "carModel": "ZS-ev",
+      "carModelType": "SUV"
+    }
+  ],
+  "Mrcedes Benz": [
+    {
+      "id": 1,
+      "company": "Mrcedes Benz",
+      "carModel": "A-Class Limousine",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG_GLC-43 Coupe",
+      "carModelType": "Coupe"
+    },
+    {
+      "company": "Mrcedes Benz",
+      "carModel": "AMG_GLC-43 ",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-A35",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-A45",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 5,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-E53",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 6,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-E53-Cabriolet",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 7,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-Eqs",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 8,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GLA-35",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GLE-Coupe",
+      "carModelType": "Coupe"
+    },
+    {
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GLE 53",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 10,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GT-63S",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 11,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GT-63S-4Matict",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 12,
+      "company": "Mrcedes Benz",
+      "carModel": "AMG-GT-63Se-Performce",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 13,
+      "company": "Mrcedes Benz",
+      "carModel": "C-Class",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 14,
+      "company": "Mrcedes Benz",
+      "carModel": "E-Class",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 15,
+      "company": "Mrcedes Benz",
+      "carModel": "EQS",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 16,
+      "company": "Mrcedes Benz",
+      "carModel": "EQC",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 17,
+      "company": "Mrcedes Benz",
+      "carModel": "EQB",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 18,
+      "company": "Mrcedes Benz",
+      "carModel": "G-Class",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 19,
+      "company": "Mrcedes Benz",
+      "carModel": "GLA",
+      "carModelType": "SUV"
+    },
+    {
+      "company": "Mrcedes Benz",
+      "carModel": "GLB",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 20,
+      "company": "Mrcedes Benz",
+      "carModel": "GLC",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 21,
+      "company": "Mrcedes Benz",
+      "carModel": "GLC-Coupe",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 22,
+      "company": "Mrcedes Benz",
+      "carModel": "GLE",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 23,
+      "company": "Mrcedes Benz",
+      "carModel": "GLS",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 24,
+      "company": "Mrcedes Benz",
+      "carModel": "GLV",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 25,
+      "company": "Mrcedes Benz",
+      "carModel": "Maybatch-GLS",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 26,
+      "company": "Mrcedes Benz",
+      "carModel": "Maybatch-Sclass",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 27,
+      "company": "Mrcedes Benz",
+      "carModel": "S-Class",
+      "carModelType": "Sedan"
+    }
+  ],
+  "MINI": [
+    {
+      "id": 1,
+      "company": "MINI",
+      "carModel": "Coopper",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 2,
+      "company": "MINI",
+      "carModel": "Convertiable",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 3,
+      "company": "MINI",
+      "carModel": "Country Man",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "MINI",
+      "carModel": "Cooper-JCW",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 5,
+      "company": "MINI",
+      "carModel": "Cooper-SE",
+      "carModelType": "Hatchback"
+    }
+  ],
+  "Nissan": [
+    {
+      "id": 1,
+      "company": "Nissan",
+      "carModel": "Kicks",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Nissan",
+      "carModel": "Magnite",
+      "carModelType": "SUV"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    },
+    {
+      "company": "Nissan"
+    }
+  ],
+  "Porsche": [
+    {
+      "id": 1,
+      "company": "Porsche",
+      "carModel": "_718",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 2,
+      "company": "Porsche",
+      "carModel": "_911",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 3,
+      "company": "Porsche",
+      "carModel": "Cayeme-Coupe",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 4,
+      "company": "Porsche",
+      "carModel": "CAYENNE",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "Porsche",
+      "carModel": "Macan",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Porsche",
+      "carModel": "Panamera",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 7,
+      "company": "Porsche",
+      "carModel": "Taycan",
+      "carModelType": "Coupe"
+    },
+    {
+      "id": 8,
+      "company": "Porsche",
+      "carModel": "Tycan Cross Turismo",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Renault": [
+    {
+      "id": 1,
+      "company": "Renault",
+      "carModel": "Arkana"
+    },
+    {
+      "company": "Renault",
+      "carModel": "Duster",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Renault",
+      "carModel": "Kiwid",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 3,
+      "company": "Renault",
+      "carModel": "Kiger",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Renault",
+      "carModel": "Triber",
+      "carModelType": "MPV"
+    }
+  ],
+  "Rolls-Royce": [
+    {
+      "id": 1,
+      "company": "Rolls-Royce",
+      "carModel": "Cullinan",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Rolls-Royce",
+      "carModel": "Dawm",
+      "carModelType": "Convertible"
+    },
+    {
+      "id": 3,
+      "company": "Rolls-Royce",
+      "carModel": "Ghost",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Rolls-Royce",
+      "carModel": "Phantom",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "Rolls-Royce",
+      "carModel": "Wraitt",
+      "carModelType": "Coupe"
+    }
+  ],
+  "Skoda": [
+    {
+      "id": 1,
+      "company": "Skoda",
+      "carModel": "Kodiaq",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Skoda",
+      "carModel": "Kushaq",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Skoda",
+      "carModel": "Octiava",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Skoda",
+      "carModel": "Slavia",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 5,
+      "company": "Skoda",
+      "carModel": "Superb",
+      "carModelType": "Sedan"
+    }
+  ],
+  "Toyota": [
+    {
+      "id": 1,
+      "company": "Toyota",
+      "carModel": "Belta",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 2,
+      "company": "Toyota",
+      "carModel": "bz4X",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 3,
+      "company": "Toyota",
+      "carModel": "Camry",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 4,
+      "company": "Toyota",
+      "carModel": "Evelntre"
+    },
+    {
+      "id": 5,
+      "company": "Toyota",
+      "carModel": "Fortuner",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "Toyota",
+      "carModel": "Fortuner-Legend",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "Toyota",
+      "carModel": "Glanza",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 8,
+      "company": "Toyota",
+      "carModel": "Hilux",
+      "carModelType": "Truck"
+    },
+    {
+      "id": 9,
+      "company": "Toyota",
+      "carModel": "Innova",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 10,
+      "company": "Toyota",
+      "carModel": "Innova Crysta",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 11,
+      "company": "Toyota",
+      "carModel": "Innova Hyperaz",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 12,
+      "company": "Toyota",
+      "carModel": "Land Cruiser",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 13,
+      "company": "Toyota",
+      "carModel": "Rumion",
+      "carModelType": "MUV"
+    },
+    {
+      "id": 14,
+      "company": "Toyota",
+      "carModel": "Urban Cruiser-Hyd",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 15,
+      "company": "Toyota",
+      "carModel": "Vellfire",
+      "carModelType": "MPV"
+    }
+  ],
+  "TATA": [
+    {
+      "id": 1,
+      "company": "TATA",
+      "carModel": "NEXON",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "TATA",
+      "carModel": "Altroz",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 3,
+      "company": "TATA",
+      "carModel": "Altroz-EV",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 4,
+      "company": "TATA",
+      "carModel": "Harrier-EV",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "TATA",
+      "carModel": "Harrior",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 6,
+      "company": "TATA",
+      "carModel": "NEXON EV",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 7,
+      "company": "TATA",
+      "carModel": "NEXON-EV Max",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 8,
+      "company": "TATA",
+      "carModel": "NEXON-EV Prime",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 9,
+      "company": "TATA",
+      "carModel": "Pucnch_EV",
+      "carModelType": "M-SUV"
+    },
+    {
+      "id": 10,
+      "company": "TATA",
+      "carModel": "Punch",
+      "carModelType": "M-SUV"
+    },
+    {
+      "id": 11,
+      "company": "TATA",
+      "carModel": "Safari",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 12,
+      "company": "TATA",
+      "carModel": "Safari-EV",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 13,
+      "company": "TATA",
+      "carModel": "Tiago-EV",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 14,
+      "company": "TATA",
+      "carModel": "Tiago-NRG",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 15,
+      "company": "TATA",
+      "carModel": "Tigor",
+      "carModelType": "HatchBack"
+    },
+    {
+      "id": 16,
+      "company": "TATA",
+      "carModel": "Tigor-EV",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 17,
+      "company": "TATA",
+      "carModel": "Tigor",
+      "carModelType": "Sedan"
+    }
+  ],
+  "Volkswogen": [
+    {
+      "id": 1,
+      "company": "Volkswogen",
+      "carModel": "Pinto",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 2,
+      "company": "Volkswogen",
+      "carModel": "Polo",
+      "carModelType": "Hatchback"
+    },
+    {
+      "id": 3,
+      "company": "Volkswogen",
+      "carModel": "Tiguan",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Volkswogen",
+      "carModel": "Vinto",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "Volkswogen",
+      "carModel": "Virtus",
+      "carModelType": "Sedan"
+    }
+  ],
+  "Volvo": [
+    {
+      "id": 1,
+      "company": "Volvo",
+      "carModel": "XC-90",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 2,
+      "company": "Volvo",
+      "carModel": "S-90",
+      "carModelType": "Sedan"
+    },
+    {
+      "id": 3,
+      "company": "Volvo",
+      "carModel": "XC-40",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 4,
+      "company": "Volvo",
+      "carModel": "XC-40 Recharge",
+      "carModelType": "SUV"
+    },
+    {
+      "id": 5,
+      "company": "Volvo",
+      "carModel": "XC-60",
+      "carModelType": "SUV"
+    }
+  ]
+}

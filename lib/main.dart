@@ -1,10 +1,20 @@
-import 'package:carwash/splashPage.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:carwash/router/RouterConfig.dart';
+
+import 'package:flutter/material.dart';
+import 'package:get_secure_storage/get_secure_storage.dart';
+
+import 'package:intl/date_symbol_data_local.dart';
+Future<void> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetSecureStorage.init(password: 'strongpassword');
+
+  initializeDateFormatting().then((value) =>runApp(const MyApp()) );
+
+
+
+
 }
 
 class MyApp extends StatelessWidget {
@@ -13,10 +23,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      title: 'Flutter Demo',
+    return  MaterialApp.router(
+      title: 'Car Wash',
+      routerConfig: router,
       theme: ThemeData(useMaterial3: true, textTheme: TextTheme(),colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo)),
-      home: SplashPage()
+    //  home: LoginPage()
     );
   }
 }

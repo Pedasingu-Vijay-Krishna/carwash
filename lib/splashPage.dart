@@ -17,13 +17,31 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   final List<String> imgList = [
 
-    'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
-    'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
-    'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
-    'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
+    'assets/serives_cursol/AC vents cleaning.jpg',
+    'assets/serives_cursol/Bumper Cleaning.jpg',
+    'assets/serives_cursol/car-wash-detailing-station.jpg',
+    'assets/serives_cursol/Dashboard Cleaning.jpg',
+    'assets/serives_cursol/Dashboard polishing.jpg',
+    'assets/serives_cursol/Exterior Cleaning.jpg',
+    'assets/serives_cursol/Interior Vaccum Cleaning.jpg',
+    'assets/serives_cursol/Mats Cleaning.jpg',
+    'assets/serives_cursol/Seat Cleaning.jpg',
+    'assets/serives_cursol/shampoo Cleaning.jpg',
+    'assets/serives_cursol/Tpre Cleaning.jpg',
+    'assets/serives_cursol/Tyre Polishing.jpg'
+
   ];
+
+  final List<String> brantpattner = [
+
+    'assets/brand_pattner_images/3m.png',
+    'assets/brand_pattner_images/Fraber.png',
+    'assets/brand_pattner_images/Menzerra.png',
+    'assets/brand_pattner_images/ShineXpro.png',
+    'assets/brand_pattner_images/Softspun.png',
+    'assets/brand_pattner_images/WaveX.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,7 +70,7 @@ class _SplashPageState extends State<SplashPage> {
                   .map((item) => Container(
                 child: Center(
                     child:
-                    Image.network(item, fit: BoxFit.cover, width: 1000)),
+                    Image.asset(item, fit: BoxFit.cover, width: 1000)),
               ))
                   .toList(),
               options: CarouselOptions(
@@ -114,18 +132,18 @@ class _SplashPageState extends State<SplashPage> {
             SizedBox(height:size.height*0.01,),
             // Brand Partners Carousel
             CarouselSlider(
-              items:  imgList
+              items:  brantpattner
                   .map((item) => Container(
                 child: Center(
                     child:
-                    Image.network(item, fit: BoxFit.cover, width: 1000)),
+                    Image.asset(item, fit: BoxFit.cover, width: 1000)),
               ))
                   .toList(),
               options: CarouselOptions(
                 autoPlay: true,
-                aspectRatio:(16/9),
+               // aspectRatio:(16/9),
                 enlargeCenterPage: true,
-                viewportFraction: 0.5,
+                viewportFraction: 0.2,
               ),
             ),
 

@@ -1,3 +1,5 @@
+import 'package:carwash/Services/ApiProvider.dart';
+import 'package:carwash/models/UserRegisterRequest.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -10,21 +12,66 @@ class SignupPage extends StatefulWidget {
 
 class _SignupPageState extends State<SignupPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  String? selectedGender;
 
+  final List<String> genders = ['Male', 'Female', 'Other'];
   String _name = '';
   String _phone = '';
   String _email = '';
   String _otp = '';
+  String _password = '';
+  String _cnfpassword = '';
   String _referralCode = '';
-
+  bool _isObscure = true;
+  bool loading = false;
   void _submitForm() {
+
+
     if (_formKey.currentState!.validate()) {
+
+      setState(() {
+        loading = true;
+      });
+      debugPrint("DWSD");
+      UserRegisterRequest userRegisterRequest =  UserRegisterRequest(dateofbirth: null,name: _name,email: _email,mobilenumber: _phone,password: _password,);
+      debugPrint(userRegisterRequest.toJson().toString());
+      ApiProvider(context).createlogin(userRegisterRequest).then((value) {
+
+        setState(() {
+          loading = false;
+        });
+
+        if(value.status==true){
+
+          setState(() {
+            otpenable = true;
+          });
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(value.message.toString())));
+        }else{
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(value.message.toString())));
+
+        }
+        debugPrint(value.toJson().toString());
+
+      }).catchError((eeror){
+
+
+        setState(() {
+          loading = false;
+        });
+
+      });
       // Perform registration logic
       // You can access the form values using the _name, _phone, _email, _otp, and _referralCode variables
       // Submit the data to your backend or perform any required operations
     }
   }
-
+  void _togglePasswordVisibility() {
+    setState(() {
+      _isObscure = !_isObscure;
+    });
+  }
+bool otpenable = false;
 
 
   InputDecoration inputd(String lable,String hintext){
@@ -53,7 +100,7 @@ class _SignupPageState extends State<SignupPage> {
         iconTheme: IconThemeData(color: Colors.indigo,size: 25),
         title: Text('Signup'),
       ),
-      body: SingleChildScrollView(
+      body: otpenable?Container():SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(height: 150,),
@@ -61,9 +108,11 @@ class _SignupPageState extends State<SignupPage> {
               padding: const EdgeInsets.only(left: 16),
               child: Align(alignment: Alignment.centerLeft,child: Text("Login to Your Account",style: GoogleFonts.poppins(fontSize: 18),)),
             ),
+
             Padding(
               padding: EdgeInsets.all(16.0),
               child: Form(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 key: _formKey,
                 child: Column(
                   children: [
@@ -113,21 +162,7 @@ class _SignupPageState extends State<SignupPage> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
-                    TextFormField(
-                      decoration: inputd( 'OTP',"Enter Opt "),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter the OTP';
-                        }
-                        return null;
-                      },
-                      onChanged: (value) {
-                        setState(() {
-                          _otp = value;
-                        });
-                      },
-                    ),
+
                     SizedBox(height: 16.0),
                     TextFormField(
                       decoration: inputd( 'Referral Code',""),
@@ -138,8 +173,90 @@ class _SignupPageState extends State<SignupPage> {
                       },
                     ),
                     SizedBox(height: 16.0),
+                    TextFormField(
+
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      decoration: InputDecoration(
+                        hintText: 'Enter your Password',
+                        //   prefixIcon: Icon(Icons.person),
+                        border: OutlineInputBorder(),
+                        filled: true,
+                        hintStyle: GoogleFonts.poppins(
+                            fontSize: 18, color: Colors.indigo),
+                        fillColor: Colors.white38,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[400]!),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.indigo),
+                        ),
+                        labelText: 'Password',
+                        suffixIcon: GestureDetector(
+                          onTap: _togglePasswordVisibility,
+                          child: Icon(
+                            _isObscure ? Icons.visibility : Icons
+                                .visibility_off,
+                          ),
+                        ),
+                      ),
+                      obscureText: _isObscure,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter your password';
+                        }
+                        // Add password validation if needed
+                        return null;
+                      },
+                      onChanged: (value) {
+                        setState(() {
+                          _password = value;
+                        });
+                      },
+                    ),
                     SizedBox(height: 16.0),
-                    ElevatedButton(
+                    TextFormField(
+
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      decoration: InputDecoration(
+                        hintText: 'Enter your Password',
+                        //   prefixIcon: Icon(Icons.person),
+                        border: OutlineInputBorder(),
+                        filled: true,
+                        hintStyle: GoogleFonts.poppins(
+                            fontSize: 18, color: Colors.indigo),
+                        fillColor: Colors.white38,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey[400]!),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.indigo),
+                        ),
+                        labelText: 'Conform Password',
+                        suffixIcon: GestureDetector(
+                          onTap: _togglePasswordVisibility,
+                          child: Icon(
+                            _isObscure ? Icons.visibility : Icons
+                                .visibility_off,
+                          ),
+                        ),
+                      ),
+                      obscureText: _isObscure,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter Conform password';
+                        }
+                        // Add password validation if needed
+                        return null;
+                      },
+                      onChanged: (value) {
+                        setState(() {
+                          _cnfpassword = value;
+                        });
+                      },
+                    ),
+
+                    SizedBox(height: 16.0),
+                 loading?Center(child: CircularProgressIndicator(),):   ElevatedButton(
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo,elevation: 5.0),
                       onPressed: _submitForm,
 
