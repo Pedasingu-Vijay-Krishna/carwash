@@ -365,7 +365,21 @@ class _UserHomeState extends State<UserHome> {
 
              context.pushNamed(RouteNames.Carslist);
 
-              },title:  Text("My Cars",style: GoogleFonts.lato(fontWeight: FontWeight.w800)),subtitle:    Text("Orders, Tracking, Monitoring, Organizing, Details",style: GoogleFonts.lato(fontSize: 12),),leading: Container(width: 50,height: 50,decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey.shade200),child: Icon(CupertinoIcons.cart,)),),
+              },title:  Text("My Cars",style: GoogleFonts.lato(fontWeight: FontWeight.w800)),subtitle:    Text("Cars Details",style: GoogleFonts.lato(fontSize: 12),),leading: Container(width: 50,height: 50,decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey.shade200),child: Icon(CupertinoIcons.cart,)),),
+              Divider(indent: 75,endIndent: 5,thickness: 2),
+                  ListTile(onTap: (){
+
+             context.pushNamed(RouteNames.HistoryPage);
+
+              },title:  Text("Orders History",style: GoogleFonts.lato(fontWeight: FontWeight.w800)),subtitle:    Text("Orders, Tracking, Details",style: GoogleFonts.lato(fontSize: 12),),leading: Container(width: 50,height: 50,decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey.shade200),child: Icon(Icons.history,)),),
+
+
+              Divider(indent: 75,endIndent: 5,thickness: 2),
+                 ListTile(onTap: (){
+
+             context.pushNamed(RouteNames.Useraddress);
+
+              },title:  Text("My Address",style: GoogleFonts.lato(fontWeight: FontWeight.w800)),subtitle:    Text("Add Address,List Address",style: GoogleFonts.lato(fontSize: 12),),leading: Container(width: 50,height: 50,decoration: BoxDecoration(shape: BoxShape.circle,color: Colors.grey.shade200),child: Icon(CupertinoIcons.home,)),),
               Divider(indent: 75,endIndent: 5,thickness: 2),
               ListTile(onTap: (){
 

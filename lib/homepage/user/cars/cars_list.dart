@@ -46,6 +46,7 @@ late  Future<CarsByUserId> getUserCars;
                 }, child: Text("Add Car +"))),
           ),
         ),
+
        FutureBuilder(future: getUserCars, builder: (BuildContext context, AsyncSnapshot<CarsByUserId> snapshot) {
 
 
@@ -59,40 +60,62 @@ late  Future<CarsByUserId> getUserCars;
 
            return ListView.builder(shrinkWrap: true,itemCount:snapshot.data!.result!.length, itemBuilder: (BuildContext context, int index) {
 
-             return Card(elevation: 3,child: Padding(
+             return Padding(
                padding: const EdgeInsets.all(8.0),
-               child: Row(
-                 mainAxisAlignment: MainAxisAlignment.start,
-                 crossAxisAlignment: CrossAxisAlignment.center,
+               child: Card(elevation: 3,child: ListTile(leading:ClipOval(child: Image.network("https://corgi-humane-completely.ngrok-free.app/api/v1/"+snapshot.data!.result!.elementAt(index).company!.picture.toString(),    width: 50, // adjust the size as needed
+                 height: 100, // adjust the size as needed
+                 fit: BoxFit.cover,)) ,
+               title: Text(snapshot.data!.result!.elementAt(index).name.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),subtitle: Column(children: [
 
-                 children: [
-                   SizedBox(width: size.width*0.2,child: ClipOval(clipBehavior: Clip.antiAliasWithSaveLayer,child: Image.network(snapshot.data!.result!.elementAt(index).company!.picture.toString(),fit: BoxFit.cover,height: 75,width: 75,))),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Name "),
-                          Text(snapshot.data!.result!.elementAt(index).name.toString()),
-                        ],
-                      ),    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Name "),
-                          Text(snapshot.data!.result!.elementAt(index).name.toString()),
-                        ],
-                      )
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
 
-                    ],),
-                  )
-                 ],
-               ),
-             ),);
+                   Text("Vechile Number"),
+                   Text(snapshot.data!.result!.elementAt(index).vehicleNumber.toString()),
+
+                 ],),
+
+                   Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+
+                   Text("Car Compnay"),
+                   Text(snapshot.data!.result!.elementAt(index).company!.company.toString()),
+
+                 ],),
+
+                   Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+
+                   Text("Car Color"),
+                   Text(snapshot.data!.result!.elementAt(index).color.toString()),
+
+                 ],),
+                   Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+
+                   Text("Car Type"),
+                   Text(snapshot.data!.result!.elementAt(index).model!.carModelType.toString()),
+
+                 ],),   Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+
+                   Text("Car Model"),
+                   Text(snapshot.data!.result!.elementAt(index).model!.carModel.toString()),
+
+                 ],),
+
+
+
+                 ]),
+
+               ),),
+             );
 
            } ,);
          }

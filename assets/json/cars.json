@@ -361,12 +361,6 @@
       "company": "Ford",
       "carModel": "Mustang",
       "carModelType": "Sedan"
-    },
-    {
-      "company": "Ford"
-    },
-    {
-      "company": "Ford"
     }
   ],
   "Force Motor": [
@@ -409,70 +403,70 @@
       "carModelType": "Sedan"
     }
   ],
-  "Hyandai": [
+  "Hyundai": [
     {
       "id": 1,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Alcazar",
       "carModelType": "SUV"
     },
     {
       "id": 2,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Aura",
       "carModelType": "Sedan"
     },
     {
       "id": 3,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Creta",
       "carModelType": "SUV"
     },
     {
       "id": 4,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Grand i10 Nios",
       "carModelType": "HatchBack"
     },
     {
       "id": 5,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "i20 Nline",
       "carModelType": "HatchBack"
     },
     {
       "id": 6,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "i20",
       "carModelType": "HatchBack"
     },
     {
       "id": 7,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Ioniq 5",
       "carModelType": "SUV"
     },
     {
       "id": 8,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Kona-ev",
       "carModelType": "SUV"
     },
     {
       "id": 9,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Tucson",
       "carModelType": "SUV"
     },
     {
       "id": 10,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Venue",
       "carModelType": "SUV"
     },
     {
       "id": 11,
-      "company": "Hyandai",
+      "company": "Hyundai",
       "carModel": "Verna",
       "carModelType": "Sedan"
     }
@@ -580,40 +574,40 @@
       "carModelType": "SUV"
     }
   ],
-  "Lamborghnini": [
+  "Lamborghini": [
     {
       "id": 1,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "Huracan-evo Spider",
       "carModelType": "Coupe"
     },
     {
       "id": 2,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "Huracan-ST O",
       "carModelType": "Coupe"
     },
     {
       "id": 3,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "Huracan-Techica",
       "carModelType": "Coupe"
     },
     {
       "id": 4,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "Hurcaneo",
       "carModelType": "Coupe"
     },
     {
       "id": 5,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "URUS-Perforante",
       "carModelType": "SUV"
     },
     {
       "id": 6,
-      "company": "Lamborghnini",
+      "company": "Lamborghini",
       "carModel": "URUS-S",
       "carModelType": "SUV"
     }
@@ -1191,195 +1185,6 @@
       "company": "Nissan",
       "carModel": "Magnite",
       "carModelType": "SUV"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
-    },
-    {
-      "company": "Nissan"
     }
   ],
   "Porsche": [
@@ -1436,7 +1241,9 @@
     {
       "id": 1,
       "company": "Renault",
-      "carModel": "Arkana"
+      "carModel": "Arkana",
+      "carModelType": "HatchBack"
+
     },
     {
       "company": "Renault",
@@ -1548,7 +1355,8 @@
     {
       "id": 4,
       "company": "Toyota",
-      "carModel": "Evelntre"
+      "carModel": "Evelntre",
+      "carModelType": "Sedan"
     },
     {
       "id": 5,

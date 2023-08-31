@@ -1,3 +1,4 @@
+import 'package:carwash/SharePref/SharePref.dart';
 import 'package:carwash/account/signupPage.dart';
 import 'package:carwash/homepage/user/useehomePage.dart';
 import 'package:carwash/models/LoginRequest.dart';
@@ -19,7 +20,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final box = GetSecureStorage();
+
   String _email = '';
   String _password = '';
   bool _isObscure = true;
@@ -36,8 +37,12 @@ class _LoginPageState extends State<LoginPage> {
           LoginRequest(email: _email, password: _password)).then((value) {
         if (value.status!) {
 
-          box.write("user", value.result!);
-          GoRouter.of(context).pushReplacementNamed(RouteNames.homepage);
+
+
+             SharePref().setUser(value.result!);
+             GoRouter.of(context).pushReplacementNamed(RouteNames.homepage);
+
+
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text(value.message.toString())));
@@ -235,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    if (box.hasData("user")) {
+    if (SharePref().getUser() !=null) {
       Future.delayed(Duration(milliseconds: 10), () {
         GoRouter.of(context).replaceNamed(RouteNames.homepage);
       });

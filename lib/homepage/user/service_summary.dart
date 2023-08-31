@@ -1,17 +1,31 @@
+import 'package:carwash/Services/ApiProvider.dart';
 import 'package:carwash/homepage/user/useehomePage.dart';
+import 'package:carwash/models/UserBookingRequest.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../models/CarsByUserId.dart' as cars;
+
+import '../../models/UserAddresssResponse.dart' as address;
+import '../../SharePref/SharePref.dart';
+import '../../models/UsersubscriptionbydateResponse.dart';
+import '../../router/RoteName.dart';
 class ServiceSummary extends StatefulWidget {
-  const ServiceSummary({super.key});
+
+
+   ServiceSummary({super.key,});
 
   @override
   State<ServiceSummary> createState() => _ServiceSummaryState();
 }
 
 class _ServiceSummaryState extends State<ServiceSummary> {
-
+  address.Result? _seelctedAddress;
+  cars.Result? _seelctedCars;
+  UsersubscriptionbydateResponse? usersubscriptionbydateResponse;
+  DateTime? selectedDate ;
   bool _isChecked = false;
 
   @override
@@ -41,7 +55,7 @@ class _ServiceSummaryState extends State<ServiceSummary> {
             ),
             ListTile(title: Text("Weekly Service"),subtitle: Text("Service will be based on selected package"),),
 
-                ListTile(title: Text("Service Start Date"),trailing: Text("20th May 2023",style: GoogleFonts.lato(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.indigo)),)
+                ListTile(title: Text("Service Start Date"),trailing: Text(selectedDate!.day.toString()+"-"+selectedDate!.month.toString()+"-"+selectedDate!.year.toString(),style: GoogleFonts.lato(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.indigo)),)
 
           ]),
           ),),
@@ -58,9 +72,27 @@ class _ServiceSummaryState extends State<ServiceSummary> {
                 SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text("Select Car",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+              child: Text("Selected Car",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
             ),
-            ListTile(title: Text("Mahindra Xuv"),trailing: Text("Color : White",style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),subtitle: Text("Number: AP39AS4747",style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
+            ListTile(title: Text(_seelctedCars!.company!.company.toString()),
+              subtitle: Column(
+
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween
+                    ,children: [
+                      Text("Number: ",style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),
+                      Text(_seelctedCars!.vehicleNumber.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween
+                    ,children: [
+                    Text("Color : "+_seelctedCars!.color.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)) ,
+                    Text(_seelctedCars!.color.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo))  ],
+                  ),
+                ],
+              ),),
 
 
           ]),
@@ -74,17 +106,34 @@ class _ServiceSummaryState extends State<ServiceSummary> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text("Select Address",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
-            ),
-            ListTile(title: Text("Home"),subtitle: Text("Home Address , Hyderabd , Home Address , Hyderabd , Kudkatpally,Kudkatpally Home Address , Hyderabd , Kudkatpally",style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Text("Select Address",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+              ),
+             ListTile(title: Text(_seelctedAddress!.name.toString()),subtitle: Text(_seelctedAddress!.address.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
 
 
           ]),
           ),),
+
+          SizedBox(height: 10,),
+          usersubscriptionbydateResponse==null?  Card(child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            width: size.width,
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: Text("Select Subscription",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+              ),
+             ListTile(title: Text(_seelctedAddress!.name.toString()),subtitle: Text(_seelctedAddress!.address.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
+
+          ]),
+          ),):SizedBox.shrink(),
 
           SizedBox(height: 10,),
           Card(child: Container(
@@ -96,10 +145,10 @@ class _ServiceSummaryState extends State<ServiceSummary> {
               children: [
 
                 SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text("Payment Summary",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
-            ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Text("Payment Summary",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+                  ),
             ListTile(
               subtitle: Column(children: [
 
@@ -182,7 +231,16 @@ class _ServiceSummaryState extends State<ServiceSummary> {
             padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 25),
             child: ElevatedButton(onPressed: (){
 
-              Get.to(() => UserHome());
+              UserBookingRequest userbooking = UserBookingRequest(userId: SharePref().getUser()!.id,startDate: selectedDate,endDate: selectedDate!.add(Duration(days: 30)),serviceType: "Ultimate",paymentDone: true,paymentId: "6578678",carid: _seelctedCars!.id,userlocation:_seelctedAddress!.id );
+
+              ApiProvider(context).NewBooking(userbooking).then((value) {
+                context.pushNamed(RouteNames.homepage);
+
+              });
+
+
+
+             // Get.to(() => UserHome());
 
             }, child: Text("Payment")),
           )
@@ -195,4 +253,39 @@ class _ServiceSummaryState extends State<ServiceSummary> {
 
     );
   }
+
+
+  @override
+  void initState() {
+
+   _seelctedAddress=    SharePref().getSelectdAddress();
+   _seelctedCars =  SharePref().getSelectdCar();
+    selectedDate=   SharePref().getSelectdDate();
+
+
+    setState(() {
+
+    });
+    debugPrint(_seelctedCars!.toJson().toString());
+    debugPrint(_seelctedAddress!.toJson().toString());
+    debugPrint(selectedDate!.toString());
+    // TODO: implement initState
+    super.initState();
+  }
+
+   getUserSubscriptions(){
+
+   ApiProvider(context).getUserSubscriptionsdate(SharePref().getUser()!.id!).then((value) {
+
+     usersubscriptionbydateResponse =value;
+     setState(() {
+
+     });
+     return value;
+   });
+
+
+
+   }
+
 }

@@ -4,12 +4,15 @@ import 'dart:developer';
 import 'package:carwash/account/loginpage.dart';
 import 'package:carwash/homepage/Coomingsoom.dart';
 import 'package:carwash/homepage/serviceDetailPage.dart';
+import 'package:carwash/homepage/user/address/UserAddress.dart';
+import 'package:carwash/homepage/user/address/addAddress.dart';
 import 'package:carwash/homepage/user/servicesPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../account/signupPage.dart';
+import '../homepage/user/History/history.dart';
 import '../homepage/user/account/user_details.dart';
 import '../homepage/user/cars/add_cars.dart';
 import '../homepage/user/cars/cars_list.dart';
@@ -90,11 +93,35 @@ import 'RoteName.dart';
           builder: (BuildContext context, GoRouterState state) {
             return  DeatilsSubscrition();
           },
-        ),  GoRoute(
+        ),
+
+        GoRoute(
           name: RouteNames.Carslist,
           path: 'Carslist',
           builder: (BuildContext context, GoRouterState state) {
             return  Carslist();
+          },
+        ),
+
+   GoRoute(
+          name: RouteNames.AddAddress,
+          path: 'AddAddress',
+          builder: (BuildContext context, GoRouterState state) {
+            return  AddAddress();
+          },
+        ),
+   GoRoute(
+          name: RouteNames.Useraddress,
+          path: 'userAddres',
+          builder: (BuildContext context, GoRouterState state) {
+            return  UserAddress();
+          },
+        ),
+   GoRoute(
+          name: RouteNames.HistoryPage,
+          path: 'HistoryPage',
+          builder: (BuildContext context, GoRouterState state) {
+            return  HistoryPage();
           },
         ),
 

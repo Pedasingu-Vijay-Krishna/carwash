@@ -1,17 +1,18 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:carwash/models/AddUserCarRequest.dart';
 import 'package:carwash/models/CarCompanyModelRequest.dart';
 import 'package:carwash/models/CarCompanymodelResponse.dart' as model;
-
 import 'package:drop_down_list/drop_down_list.dart';
 import 'package:drop_down_list/model/selected_list_item.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart' show ByteData, rootBundle;
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:dio/dio.dart';
 import 'package:get_secure_storage/get_secure_storage.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../../../Services/ApiProvider.dart';
 import '../../../models/CarCompanyResponse.dart';
@@ -26,42 +27,41 @@ class Addcars extends StatefulWidget {
 
 class _AddcarsState extends State<Addcars> {
   final box = GetSecureStorage();
-  List<String> cars =[
-    'assets/cars/Aston Martin.png',
-    'assets/cars/Audi.png',
-    'assets/cars/Bentley.png',
-    'assets/cars/Benz.png',
-    'assets/cars/BMW.png',
-    'assets/cars/BYD.png',
-    'assets/cars/Ferrari.png',
-    'assets/cars/Force Motors.png',
-    'assets/cars/Ford.png',
-    'assets/cars/Honda.png',
-    'assets/cars/Hyundai.png',
-    'assets/cars/Isuzu.png',
-    'assets/cars/Jaguar.png',
-    'assets/cars/Jeep.png',
-    'assets/cars/KIA.png',
-    'assets/cars/Lamborghini.png',
-    'assets/cars/Land rover.png',
-    'assets/cars/Lexus.png',
-    'assets/cars/Mahindra.png',
-    'assets/cars/Marthi Suzuki.png',
-    'assets/cars/Masterati.png',
-    'assets/cars/McLaren.png',
-    'assets/cars/MG.png',
-    'assets/cars/MINI.png',
-    'assets/cars/Nissan.png',
-    'assets/cars/Porsche.png',
-    'assets/cars/Renault.png',
-    'assets/cars/Rolls-Royce.png',
-    'assets/cars/Skoda.png',
-    'assets/cars/TATA.png',
-    'assets/cars/Toyota.png',
-    'assets/cars/Volkswagen.png',
-    'assets/cars/Volvo.png'
-
-  ];
+  Map<String,String> cars =   {
+  'Aston Martin': 'assets/cars/Aston Martin.png',
+  'Audi': 'assets/cars/Audi.png',
+  'Bentley': 'assets/cars/Bentley.png',
+  'Mrcedes Benz': 'assets/cars/Benz.png',
+  'BMW': 'assets/cars/BMW.png',
+  'BYD': 'assets/cars/BYD.png',
+  'Ferreri': 'assets/cars/Ferrari.png',
+  'Force Motor': 'assets/cars/Force Motors.png',
+  'Ford': 'assets/cars/Ford.png',
+  'Honda': 'assets/cars/Honda.png',
+  'Hyundai': 'assets/cars/Hyundai.png',
+  'ISUZU': 'assets/cars/Isuzu.png',
+  'Jaguar': 'assets/cars/Jaguar.png',
+  'Jeep': 'assets/cars/Jeep.png',
+  'KIA': 'assets/cars/KIA.png',
+  'Lamborghini': 'assets/cars/Lamborghini.png',
+  'Land Rover': 'assets/cars/Land rover.png',
+  'Lexus': 'assets/cars/Lexus.png',
+  'Mahindra': 'assets/cars/Mahindra.png',
+  'Maruti Suzuki': 'assets/cars/Marthi Suzuki.png',
+  'Mastrati': 'assets/cars/Masterati.png',
+  'McLarn': 'assets/cars/McLaren.png',
+  'MG': 'assets/cars/MG.png',
+  'MINI': 'assets/cars/MINI.png',
+  'Nissan': 'assets/cars/Nissan.png',
+  'Porsche': 'assets/cars/Porsche.png',
+  'Renault': 'assets/cars/Renault.png',
+  'Rolls-Royce': 'assets/cars/Rolls-Royce.png',
+  'Skoda': 'assets/cars/Skoda.png',
+  'TATA': 'assets/cars/TATA.png',
+  'Toyota': 'assets/cars/Toyota.png',
+  'Volkswogen': 'assets/cars/Volkswagen.png',
+  'Volvo': 'assets/cars/Volvo.png',
+  };
 
   List<Result> carsList=[];
   List<model.Result>? carModels=[];
@@ -142,7 +142,7 @@ TextEditingController vechilename = TextEditingController();
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(height: 80,child: Image.network(e.picture!,filterQuality: FilterQuality.low,)),
+                        Container(height: 80,child: Image.network("https://corgi-humane-completely.ngrok-free.app/api/v1/"+e.picture.toString(),filterQuality: FilterQuality.low,)),
                         Container(child: Text(e.company.toString(),style: GoogleFonts.acme(fontSize: 16),)),
                       ],
                     ),
@@ -376,7 +376,7 @@ TextEditingController vechilename = TextEditingController();
 
   @override
   void initState() {
-  //  loadJsonData();
+ // loadJsonData();
 
     getCars();
     
@@ -437,43 +437,74 @@ TextEditingController vechilename = TextEditingController();
     final jsonData = await readJsonFile('assets/json/cars.json');
 
 
+    List<CarDet> card =[];
+    List<Map<String,String>> cars2 =[];
 
-    jsonData.forEach((key, value) {
+    cars.forEach((key, value) {
+    //  debugPrint(key);
+      jsonData.forEach((key1, value1) {
 
+        if(key1==key) {
+          List<CompyModel> models=[];
+          for (var item in value1) {
+         //   debugPrint(item.toString());
 
-      List<CarModels> cars =[];
+            models.add(CompyModel(model: item['carModel'],type:  item['carModelType']));
+         //   models[item['carModel']]=item['carModelType'].toString();
+            //  cars2.add(CarModels(id: item['id'].toString(),company: item['company'].toString(),carModelType: item['carModelType'].toString(),carModel: item['carModel'].toString()));
+          }
+          card.add(CarDet(key, value, models));
+          //  debugPrint(cars.elementAt(0).toJson().toString() );
+          //  carModels[key]= cars;
+        }
+      });
 
-      for(var item in value){
-
-        //  debugPrint(item['id'].toString() );
-        //  debugPrint(item['company'].toString() );
-        //  debugPrint(item['carModelType'].toString() );
-        //  debugPrint(item['carModel'].toString() );
-
-        cars.add(CarModels(id: item['id'].toString(),company: item['company'].toString(),carModelType: item['carModelType'].toString(),carModel: item['carModel'].toString()));
-      }
-
-      //    debugPrint(cars.toList().toString() );
-    //  carModels[key]= cars;
     });
+    List<int> items = [1, 2, 3, 4, 5];
+
+    // for (int item in items) {
+    //   print('Processing item $item');
+    //   await Future.delayed(Duration(seconds: 3));
+    //   print('Item $item processed');
+    // }
+
+    for(var element in card)   {
+
+      print('Processing item $element');
+     // debugPrint(element.image);
+     // debugPrint(element.Comapny);
+      //debugPrint(element.models.keys.toString());
+     // debugPrint(element.models.values.toString());
+      await Future.delayed(Duration(seconds: 3));
+      List<MultipartFile> files =[];
+
+      File file =await  assetToFile(element.image);
+
+      files.add( MultipartFile.fromFileSync(file.path));
+      debugPrint(element.models.toString());
+      await Future.delayed(Duration(seconds: 3));
+      print('Item $element processed');
+      await  ApiProvider(context).bookingstarted(files, element.Comapny, element.models).then((value) {
 
 
-    // carModels['Volvo']!.toList().forEach((element) {
-    //
-    //   debugPrint(element.toJson().toString());
-    // });
-    //  debugPrint(carModels['Volvo']!.toList() as String?);
-    // Access the JSON data
-    final companies = jsonData['companies'];
-    //   final carModels = jsonData['carModels'];
-    final carModelTypes = jsonData['carModelTypes'];
+      });
 
+
+
+    };
 
     // Process the data as needed
     // ...
   }
 
-
+  Future<File> assetToFile(String assetPath) async {
+    final ByteData byteData = await rootBundle.load(assetPath);
+    final buffer = byteData.buffer.asUint8List();
+    final tempDir = await getTemporaryDirectory();
+    final tempFile = File('${tempDir.path}/${assetPath.split('/')[2]}');
+    await tempFile.writeAsBytes(buffer);
+    return tempFile;
+  }
 
   DisplayCarModel(){
     DropDownState(
@@ -686,5 +717,44 @@ TextEditingController vechilename = TextEditingController();
     });
 
   }
+}
+
+
+class CarDet{
+  String Comapny;
+  String image;
+  List<CompyModel> models;
+
+  CarDet(this.Comapny, this.image, this.models);
+}
+
+// To parse this JSON data, do
+//
+//     final compyModel = compyModelFromJson(jsonString);
+
+
+
+CompyModel compyModelFromJson(String str) => CompyModel.fromJson(json.decode(str));
+
+String compyModelToJson(CompyModel data) => json.encode(data.toJson());
+
+class CompyModel {
+  String? model;
+  String? type;
+
+  CompyModel({
+    this.model,
+    this.type,
+  });
+
+  factory CompyModel.fromJson(Map<String, dynamic> json) => CompyModel(
+    model: json["model"],
+    type: json["type"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "model": model,
+    "type": type,
+  };
 }
 
