@@ -385,6 +385,35 @@ class _RestClient implements RestClient {
   }
 
   @override
+  Future<OrderByBetweendatesResponse> getOrderByDates(
+      OrderByBetweendatesResquest orderByBetweendatesResquest) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(orderByBetweendatesResquest.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<OrderByBetweendatesResponse>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/orders/bookingsbyUserId',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = OrderByBetweendatesResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
   Future<UserBookingByOrderIdResponse> bookingorderId(String id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};

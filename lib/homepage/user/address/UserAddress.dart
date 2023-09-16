@@ -26,7 +26,9 @@ class _UserAddressState extends State<UserAddress> {
 
         Align(alignment: Alignment.centerRight,child: GestureDetector(onTap: (){
 
-          context.pushNamed(RouteNames.AddAddress);
+          context.pushNamed(RouteNames.AddAddress).then((value) {
+            getAddress = ApiProvider(context).getUserAddreess(SharePref().getUser()!.id.toString());
+          });
 
         },child: Text(" + Add Address",style: TextStyle(color: Colors.black),)),),
 

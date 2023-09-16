@@ -1,6 +1,7 @@
 import 'package:carwash/Services/ApiProvider.dart';
 import 'package:carwash/homepage/user/useehomePage.dart';
 import 'package:carwash/models/UserBookingRequest.dart';
+import 'package:carwash/models/UsersubscriptionAddRequest.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -118,7 +119,7 @@ class _ServiceSummaryState extends State<ServiceSummary> {
           ),),
 
           SizedBox(height: 10,),
-          usersubscriptionbydateResponse==null?  Card(child: Container(
+          usersubscriptionbydateResponse==null?  SizedBox(height: 10,):  usersubscriptionbydateResponse!.usersubscriptionresult==null? Card(child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             width: size.width,
           child: Column(
@@ -188,7 +189,8 @@ class _ServiceSummaryState extends State<ServiceSummary> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
             child: Text("Terms and Conditions"),
-          ),  Padding(
+          ),
+          Padding(
             padding: const EdgeInsets.symmetric(vertical: 1,horizontal: 5),
             child: Row(
               children: [
@@ -233,6 +235,15 @@ class _ServiceSummaryState extends State<ServiceSummary> {
 
               UserBookingRequest userbooking = UserBookingRequest(userId: SharePref().getUser()!.id,startDate: selectedDate,endDate: selectedDate!.add(Duration(days: 30)),serviceType: "Ultimate",paymentDone: true,paymentId: "6578678",carid: _seelctedCars!.id,userlocation:_seelctedAddress!.id );
 
+               if(usersubscriptionbydateResponse!.usersubscriptionresult==null) {
+                 ApiProvider(context).AddUserSubscriptions(
+                     UsersubscriptionAddRequest(userId: SharePref().getUser()!.id,plan: "64dbb5d45f2f8909ded1ff4a",startDate: DateTime.now(),endDate: DateTime.now().add(Duration(days: 365)),)).then((value) {
+
+                       debugPrint("Subscriptions Added");
+
+                 });
+               }
+
               ApiProvider(context).NewBooking(userbooking).then((value) {
                 context.pushNamed(RouteNames.homepage);
 
@@ -261,7 +272,7 @@ class _ServiceSummaryState extends State<ServiceSummary> {
    _seelctedAddress=    SharePref().getSelectdAddress();
    _seelctedCars =  SharePref().getSelectdCar();
     selectedDate=   SharePref().getSelectdDate();
-
+   getUserSubscriptions();
 
     setState(() {
 

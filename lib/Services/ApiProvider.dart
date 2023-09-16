@@ -8,6 +8,8 @@ import 'package:carwash/models/CarCompanyResponse.dart';
 import 'package:carwash/models/CarCompanymodelResponse.dart';
 import 'package:carwash/models/LoginRequest.dart';
 import 'package:carwash/models/LoginResponse.dart';
+import 'package:carwash/models/OrderByBetweendatesResponse.dart';
+import 'package:carwash/models/OrderByBetweendatesResquest.dart';
 import 'package:carwash/models/SubscriptionResponse.dart';
 import 'package:carwash/models/UserBookingByOrderIdResponse.dart';
 import 'package:carwash/models/UserBookingByUserIdResponse.dart';
@@ -36,16 +38,16 @@ class ApiProvider implements RestClient{
   @override
   Future<LoginResponse> userlogin(LoginRequest loginRequest) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.userlogin(loginRequest).then((value) =>value).catchError((Object obj) {
@@ -70,16 +72,16 @@ class ApiProvider implements RestClient{
   Future<LoginResponse> createlogin(UserRegisterRequest userRegisterRequest) {
 
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.createlogin(userRegisterRequest).then((value) =>value).catchError((Object obj) {
@@ -103,16 +105,16 @@ class ApiProvider implements RestClient{
   @override
   Future<CarCompanyModelResponse> getCarmodels(CarCompanyModelRequest carCompanyModelRequest) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getCarmodels(carCompanyModelRequest).then((value) =>value).catchError((Object obj) {
@@ -135,17 +137,17 @@ class ApiProvider implements RestClient{
   @override
   Future<CarCompanyResponse> getCars() {
 
-
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getCars().then((value) =>value).catchError((Object obj) {
@@ -202,16 +204,16 @@ class ApiProvider implements RestClient{
   Future<CarsByUserId> getUserCars(String id) {
 
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getUserCars(id).then((value) =>value).catchError((Object obj) {
@@ -234,16 +236,16 @@ class ApiProvider implements RestClient{
   @override
   Future<AddAddresssResponse> addUserAddress(AddAddresss addAddresss) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.addUserAddress(addAddresss).then((value) =>value).catchError((Object obj) {
@@ -266,16 +268,16 @@ class ApiProvider implements RestClient{
   @override
   Future<UserAddresssResponse> getUserAddreess(String id) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getUserAddreess(id).then((value) =>value).catchError((Object obj) {
@@ -297,16 +299,16 @@ class ApiProvider implements RestClient{
 
   @override
   Future<SubscriptionResponse> getSubscriptions() {
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getSubscriptions().then((value) =>value).catchError((Object obj) {
@@ -329,16 +331,16 @@ class ApiProvider implements RestClient{
   @override
   Future<UsersubscriptionAddResponse> AddUserSubscriptions(UsersubscriptionAddRequest usersubscriptionAddRequest) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.AddUserSubscriptions(usersubscriptionAddRequest).then((value) =>value).catchError((Object obj) {
@@ -360,16 +362,16 @@ class ApiProvider implements RestClient{
 
   @override
   Future<UsersubscriptionresultbuuId> getUserSubscriptions(String id) {
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getUserSubscriptions(id).then((value) =>value).catchError((Object obj) {
@@ -392,16 +394,16 @@ class ApiProvider implements RestClient{
   @override
   Future<UsersubscriptionbydateResponse> getUserSubscriptionsdate(String id) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.getUserSubscriptionsdate(id).then((value) =>value).catchError((Object obj) {
@@ -424,16 +426,16 @@ class ApiProvider implements RestClient{
   @override
   Future<UserBookingResponse> NewBooking(UserBookingRequest userBookingRequest) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.NewBooking(userBookingRequest).then((value) =>value).catchError((Object obj) {
@@ -455,16 +457,16 @@ class ApiProvider implements RestClient{
 
   @override
   Future<UserBookingByUserIdResponse> bookingbyUserId(String id) {
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.bookingbyUserId(id).then((value) =>value).catchError((Object obj) {
@@ -486,16 +488,16 @@ class ApiProvider implements RestClient{
 
   @override
   Future<UserBookingByOrderIdResponse> bookingorderId(String id) {
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.bookingorderId(id).then((value) =>value).catchError((Object obj) {
@@ -518,16 +520,16 @@ class ApiProvider implements RestClient{
   @override
   Future<String> bookingstarted(List<MultipartFile> files, String status, List<CompyModel> startime,) {
 
-    dio.interceptors.add(PrettyDioLogger());
-// customization
-    dio.interceptors.add(PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90));
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
     final _resclient = RestClient(dio);
 
     return  _resclient.bookingstarted(files,status,startime).then((value) =>value).catchError((Object obj) {
@@ -543,6 +545,39 @@ class ApiProvider implements RestClient{
           break;
       }
     });   // TODO: implement bookingstarted
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<OrderByBetweendatesResponse> getOrderByDates(OrderByBetweendatesResquest orderByBetweendatesResquest) {
+
+//     dio.interceptors.add(PrettyDioLogger());
+// // customization
+//     dio.interceptors.add(PrettyDioLogger(
+//         requestHeader: true,
+//         requestBody: true,
+//         responseBody: true,
+//         responseHeader: false,
+//         error: true,
+//         compact: true,
+//         maxWidth: 90));
+    final _resclient = RestClient(dio);
+
+    return  _resclient.getOrderByDates(orderByBetweendatesResquest).then((value) =>value).catchError((Object obj) {
+      // non-200 error goes here.
+      switch (obj.runtimeType) {
+        case DioException:
+        // Here's the sample to get the failed response error code and message
+          final res = (obj as DioException).response;
+
+          debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
+          break;
+        default:
+          break;
+      }
+    });
+
+    // TODO: implement getOrderByDates
     throw UnimplementedError();
   }
 

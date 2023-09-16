@@ -304,25 +304,28 @@ class _ServiceDetailsState extends State<ServiceDetails> {
               ),
             ),
             SizedBox(height: 10,),
-            Card(
-              child: Container(
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Card(
+                child: Container(
+                  width: size.width,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
 
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
 
-                      Text("Weekly 5 Days",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
-                      Text("    ➢ Dust Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                      Text("    ➢ External Body Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                      Text("    ➢ External Glass Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                      Text("    ➢ Bumper Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                      Text("    ➢ Tire Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("Weekly 5 Days",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
+                        Text("    ➢ Dust Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("    ➢ External Body Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("    ➢ External Glass Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("    ➢ Bumper Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("    ➢ Tire Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
 
-                    ],),
+                      ],),
+                  ),
                 ),
               ),
             ),
@@ -341,60 +344,66 @@ class _ServiceDetailsState extends State<ServiceDetails> {
                 ),
               ),
             SizedBox(height: 10,),
-            Card(
-              child: SizedBox(
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Card(
+                child: SizedBox(
+                  width: size.width,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
 
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
 
-                      Column(
+                        Column(
 
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("Monthly Twice",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
-                          Text("➢ Car Shampoo External",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                          Text("➢ Interior Vacuum",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                          Text("➢  Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                          Text("     ✓ Seat Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                          Text("     ✓ Mat Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                          Text("     ✓ AC Vent Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                          Text("     ✓ Ash Tray Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                          Text("     ✓ Cup Holders Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                          Text("➢ Doors Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                          Text("➢ Wheel Arch Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Monthly Twice",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
+                            Text("➢ Car Shampoo External",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                            Text("➢ Interior Vacuum",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                            Text("➢  Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                            Text("     ✓ Seat Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                            Text("     ✓ Mat Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                            Text("     ✓ AC Vent Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                            Text("     ✓ Ash Tray Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                            Text("     ✓ Cup Holders Cleaning",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                            Text("➢ Doors Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                            Text("➢ Wheel Arch Cleaning",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
 
-                        ],),
+                          ],),
 
 
-                    ],),
+                      ],),
+                  ),
                 ),
               ),
             ),    SizedBox(height: 10,),
-            Card(
-              child: SizedBox(
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:
-                  Column(
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: Card(
+                child: SizedBox(
+                  width: size.width,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child:
+                    Column(
 
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Monthly Once",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Monthly Once",style: TextStyle(fontSize:16,fontWeight: FontWeight.bold),),
 
-                      Text("➢ Dashboard Polishing",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
-                      Text("➢ Door Panels Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                      Text("➢ Tires Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
-                      Text("➢ Seat Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                        Text("➢ Dashboard Polishing",style: TextStyle(fontSize:14,fontWeight: FontWeight.w500),),
+                        Text("➢ Door Panels Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                        Text("➢ Tires Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
+                        Text("➢ Seat Polishing",style: TextStyle(fontSize:12,fontWeight: FontWeight.w500),),
 
-                    ],),
+                      ],),
+                  ),
                 ),
               ),
             ),
@@ -646,7 +655,30 @@ class _ServiceDetailsState extends State<ServiceDetails> {
               showModalBottomSheet(context: context, builder: (BuildContext context){
 
                 if(getUserCars==null ||getUserCars!.result!.isEmpty){
-                  return Text("No Cars Added Please Add Cars");
+                  return SizedBox(height: 150,width: double.infinity,child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+
+
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("No Cars Added Please Add ",style: TextStyle(fontWeight: FontWeight.bold),),
+
+                        ),
+                      ),
+                      ElevatedButton(onPressed: (){
+
+                        GoRouter.of(context).pushNamed(RouteNames.Carslist).then((value) {
+
+                          context.pop();
+                          getUserCar();
+                        });
+
+                      }, child: Text("+ Add Car"))
+                    ],
+                  ));
+
                 }else{
                   return ListView.builder(itemCount: getUserCars!.result!.length, itemBuilder: (BuildContext context, int index) {
 
@@ -661,7 +693,7 @@ class _ServiceDetailsState extends State<ServiceDetails> {
 
                         });
 
-                      },leading:ClipOval(child: Image.network(getUserCars!.result!.elementAt(index).company!.picture.toString(),    width: 50, // adjust the size as needed
+                      },leading:ClipOval(child: Image.network("https://corgi-humane-completely.ngrok-free.app/api/v1/"+getUserCars!.result!.elementAt(index).company!.picture.toString(),    width: 50, // adjust the size as needed
                         height: 100, // adjust the size as needed
                         fit: BoxFit.cover,)) ,
                         title: Text(getUserCars!.result!.elementAt(index).name.toString(),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),subtitle: Column(children: [
@@ -730,7 +762,29 @@ class _ServiceDetailsState extends State<ServiceDetails> {
               showModalBottomSheet(context: context, builder: (BuildContext context){
 
                 if(getAddress==null ||getAddress!.result!.isEmpty){
-                  return Text("No Cars Added Please Add Address");
+                  return SizedBox(height: 150,width: double.infinity,child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+
+
+                      Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text("No Address Added Please Add Address",style: TextStyle(fontWeight: FontWeight.bold),),
+
+                        ),
+                      ),
+                      ElevatedButton(onPressed: (){
+
+                        GoRouter.of(context).pushNamed(RouteNames.Useraddress).then((value) {
+
+                          context.pop();
+                          getUserAddress();
+                        });
+
+                      }, child: Text("+ Add Address"))
+                    ],
+                  ));
                 }else{
                   return ListView.builder(itemCount: getAddress!.result!.length, itemBuilder: (BuildContext context, int index) {
 
@@ -831,6 +885,24 @@ class _ServiceDetailsState extends State<ServiceDetails> {
           ),),
           ElevatedButton(onPressed: () async {
 
+            if(selectedDate ==null){
+
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please Select Date")));
+              return;
+
+            }
+            if(_seelctedCars ==null){
+
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please Select Car Model")));
+                      return;
+
+                    }
+          if(_seelctedAddress ==null){
+
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Please Select Address")));
+                      return;
+
+                    }
 
           await  SharePref().setSelectedCar(_seelctedCars!);
            await SharePref().setUserAddress(_seelctedAddress!);

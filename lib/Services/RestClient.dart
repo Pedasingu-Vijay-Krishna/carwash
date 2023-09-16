@@ -9,6 +9,8 @@ import 'package:carwash/models/AddUserCarResponse.dart';
 import 'package:carwash/models/CarCompanyModelRequest.dart';
 import 'package:carwash/models/CarCompanyResponse.dart';
 import 'package:carwash/models/CarCompanymodelResponse.dart';
+import 'package:carwash/models/OrderByBetweendatesResponse.dart';
+import 'package:carwash/models/OrderByBetweendatesResquest.dart';
 import 'package:carwash/models/SubscriptionResponse.dart';
 import 'package:carwash/models/UserAddresssResponse.dart';
 import 'package:carwash/models/UserBookingByOrderIdResponse.dart';
@@ -75,6 +77,10 @@ abstract class RestClient {
 
   @POST("/orders/userOrder")
   Future<UserBookingResponse> NewBooking(@Body() UserBookingRequest userBookingRequest);
+
+
+  @POST("/orders/bookingsbyUserId")
+  Future<OrderByBetweendatesResponse> getOrderByDates(@Body() OrderByBetweendatesResquest orderByBetweendatesResquest);
 
   @GET("/orders/orderbyId/{id}")
   Future<UserBookingByOrderIdResponse> bookingorderId(@Path() String id,);
