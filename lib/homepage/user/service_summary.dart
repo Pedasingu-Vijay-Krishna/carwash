@@ -13,10 +13,11 @@ import '../../models/UserAddresssResponse.dart' as address;
 import '../../SharePref/SharePref.dart';
 import '../../models/UsersubscriptionbydateResponse.dart';
 import '../../router/RoteName.dart';
+
 class ServiceSummary extends StatefulWidget {
-
-
-   ServiceSummary({super.key,});
+  ServiceSummary({
+    super.key,
+  });
 
   @override
   State<ServiceSummary> createState() => _ServiceSummaryState();
@@ -26,172 +27,243 @@ class _ServiceSummaryState extends State<ServiceSummary> {
   address.Result? _seelctedAddress;
   cars.Result? _seelctedCars;
   UsersubscriptionbydateResponse? usersubscriptionbydateResponse;
-  DateTime? selectedDate ;
+  DateTime? selectedDate;
   bool _isChecked = false;
 
   @override
   Widget build(BuildContext context) {
-
     Size size = MediaQuery.of(context).size;
-    return  Scaffold(
-
-      appBar: AppBar(title: Text("Summary"),),
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Summary"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(children: [
-
-          Card(child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            width: size.width,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text("Selected Service",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+          Card(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: size.width,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text(
+                        "Selected Service",
+                        style: GoogleFonts.lato(
+                            fontSize: 18, color: Colors.indigo),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text("Weekly Service"),
+                      subtitle:
+                          Text("Service will be based on selected package"),
+                    ),
+                    ListTile(
+                      title: Text("Service Start Date"),
+                      trailing: Text(
+                          selectedDate!.day.toString() +
+                              "-" +
+                              selectedDate!.month.toString() +
+                              "-" +
+                              selectedDate!.year.toString(),
+                          style: GoogleFonts.lato(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.indigo)),
+                    )
+                  ]),
             ),
-            ListTile(title: Text("Weekly Service"),subtitle: Text("Service will be based on selected package"),),
-
-                ListTile(title: Text("Service Start Date"),trailing: Text(selectedDate!.day.toString()+"-"+selectedDate!.month.toString()+"-"+selectedDate!.year.toString(),style: GoogleFonts.lato(fontSize: 14,fontWeight: FontWeight.bold,color: Colors.indigo)),)
-
-          ]),
-          ),),
-
-          SizedBox(height: 10,),
-          Card(child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            width: size.width,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Text("Selected Car",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: size.width,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text(
+                        "Selected Car",
+                        style: GoogleFonts.lato(
+                            fontSize: 18, color: Colors.indigo),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(_seelctedCars!.company!.company.toString()),
+                      subtitle: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Number: ",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14, color: Colors.indigo)),
+                              Text(_seelctedCars!.vehicleNumber.toString(),
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14, color: Colors.indigo)),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Color : " + _seelctedCars!.color.toString(),
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14, color: Colors.indigo)),
+                              Text(_seelctedCars!.color.toString(),
+                                  style: GoogleFonts.lato(
+                                      fontSize: 14, color: Colors.indigo))
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ]),
             ),
-            ListTile(title: Text(_seelctedCars!.company!.company.toString()),
-              subtitle: Column(
-
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween
-                    ,children: [
-                      Text("Number: ",style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),
-                      Text(_seelctedCars!.vehicleNumber.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween
-                    ,children: [
-                    Text("Color : "+_seelctedCars!.color.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)) ,
-                    Text(_seelctedCars!.color.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo))  ],
-                  ),
-                ],
-              ),),
-
-
-          ]),
-          ),),
-
-          SizedBox(height: 10,),
-          Card(child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            width: size.width,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Text("Select Address",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
-              ),
-             ListTile(title: Text(_seelctedAddress!.name.toString()),subtitle: Text(_seelctedAddress!.address.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
-
-
-          ]),
-          ),),
-
-          SizedBox(height: 10,),
-          usersubscriptionbydateResponse==null?  SizedBox(height: 10,):  usersubscriptionbydateResponse!.usersubscriptionresult==null? Card(child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            width: size.width,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: Text("Select Subscription",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
-              ),
-             ListTile(title: Text(_seelctedAddress!.name.toString()),subtitle: Text(_seelctedAddress!.address.toString(),style: GoogleFonts.lato(fontSize: 14,color: Colors.indigo)),),
-
-          ]),
-          ),):SizedBox.shrink(),
-
-          SizedBox(height: 10,),
-          Card(child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            width: size.width,
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-
-                SizedBox(height: 10,),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Text("Payment Summary",style: GoogleFonts.lato(fontSize: 18,color: Colors.indigo),),
-                  ),
-            ListTile(
-              subtitle: Column(children: [
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: size.width,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("Service Cost"),
-                  Text("450"),
-
-
-                ],),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text(
+                        "Select Address",
+                        style: GoogleFonts.lato(
+                            fontSize: 18, color: Colors.indigo),
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(_seelctedAddress!.name.toString()),
+                      subtitle: Text(_seelctedAddress!.address.toString(),
+                          style: GoogleFonts.lato(
+                              fontSize: 14, color: Colors.indigo)),
+                    ),
+                  ]),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          usersubscriptionbydateResponse == null
+              ? SizedBox(
+                  height: 10,
+                )
+              : usersubscriptionbydateResponse!.usersubscriptionresult == null
+                  ? Card(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        width: size.width,
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 15),
+                                child: Text(
+                                  "Select Subscription",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 18, color: Colors.indigo),
+                                ),
+                              ),
+                              ListTile(
+                                title: Text(_seelctedAddress!.name.toString()),
+                                subtitle: Text(
+                                    _seelctedAddress!.address.toString(),
+                                    style: GoogleFonts.lato(
+                                        fontSize: 14, color: Colors.indigo)),
+                              ),
+                            ]),
+                      ),
+                    )
+                  : SizedBox.shrink(),
+          SizedBox(
+            height: 10,
+          ),
+          Card(
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: size.width,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("Gst "),
-                  Text("50"),
-
-
-                ],),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                  Text("Total "),
-                  Text("450"),
-
-
-                ],),
-                SizedBox(height: 10,),
-
-
-              ],)),
-
-
-          ]),
-          ),),
-
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Text(
+                        "Payment Summary",
+                        style: GoogleFonts.lato(
+                            fontSize: 18, color: Colors.indigo),
+                      ),
+                    ),
+                    ListTile(
+                        subtitle: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Service Cost"),
+                            Text("450"),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Gst "),
+                            Text("50"),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Total "),
+                            Text("450"),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    )),
+                  ]),
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: Text("Terms and Conditions"),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 1,horizontal: 5),
+            padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 5),
             child: Row(
               children: [
                 Checkbox(
@@ -230,53 +302,54 @@ class _ServiceSummaryState extends State<ServiceSummary> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 25),
-            child: ElevatedButton(onPressed: (){
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+            child: ElevatedButton(
+                onPressed: () {
+                  UserBookingRequest userbooking = UserBookingRequest(
+                      userId: SharePref().getUser()!.id,
+                      startDate: selectedDate,
+                      endDate: selectedDate!.add(Duration(days: 30)),
+                      serviceType: "Ultimate",
+                      paymentDone: true,
+                      paymentId: "6578678",
+                      carid: _seelctedCars!.id,
+                      userlocation: _seelctedAddress!.id);
 
-              UserBookingRequest userbooking = UserBookingRequest(userId: SharePref().getUser()!.id,startDate: selectedDate,endDate: selectedDate!.add(Duration(days: 30)),serviceType: "Ultimate",paymentDone: true,paymentId: "6578678",carid: _seelctedCars!.id,userlocation:_seelctedAddress!.id );
+                  if (usersubscriptionbydateResponse!.usersubscriptionresult ==
+                      null) {
+                    ApiProvider(context)
+                        .AddUserSubscriptions(UsersubscriptionAddRequest(
+                      userId: SharePref().getUser()!.id,
+                      plan: "64fd9ad322baee46f6d4313f",
+                      startDate: DateTime.now(),
+                      endDate: DateTime.now().add(Duration(days: 365)),
+                    ))
+                        .then((value) {
+                      debugPrint("Subscriptions Added");
+                    });
+                  }
 
-               if(usersubscriptionbydateResponse!.usersubscriptionresult==null) {
-                 ApiProvider(context).AddUserSubscriptions(
-                     UsersubscriptionAddRequest(userId: SharePref().getUser()!.id,plan: "64dbb5d45f2f8909ded1ff4a",startDate: DateTime.now(),endDate: DateTime.now().add(Duration(days: 365)),)).then((value) {
+                  ApiProvider(context).NewBooking(userbooking).then((value) {
+                    context.pushNamed(RouteNames.homepage);
+                  });
 
-                       debugPrint("Subscriptions Added");
-
-                 });
-               }
-
-              ApiProvider(context).NewBooking(userbooking).then((value) {
-                context.pushNamed(RouteNames.homepage);
-
-              });
-
-
-
-             // Get.to(() => UserHome());
-
-            }, child: Text("Payment")),
+                  // Get.to(() => UserHome());
+                },
+                child: Text("Payment")),
           )
-
-
-
         ]),
       ),
-
-
     );
   }
 
-
   @override
   void initState() {
+    _seelctedAddress = SharePref().getSelectdAddress();
+    _seelctedCars = SharePref().getSelectdCar();
+    selectedDate = SharePref().getSelectdDate();
+    getUserSubscriptions();
 
-   _seelctedAddress=    SharePref().getSelectdAddress();
-   _seelctedCars =  SharePref().getSelectdCar();
-    selectedDate=   SharePref().getSelectdDate();
-   getUserSubscriptions();
-
-    setState(() {
-
-    });
+    setState(() {});
     debugPrint(_seelctedCars!.toJson().toString());
     debugPrint(_seelctedAddress!.toJson().toString());
     debugPrint(selectedDate!.toString());
@@ -284,19 +357,13 @@ class _ServiceSummaryState extends State<ServiceSummary> {
     super.initState();
   }
 
-   getUserSubscriptions(){
-
-   ApiProvider(context).getUserSubscriptionsdate(SharePref().getUser()!.id!).then((value) {
-
-     usersubscriptionbydateResponse =value;
-     setState(() {
-
-     });
-     return value;
-   });
-
-
-
-   }
-
+  getUserSubscriptions() {
+    ApiProvider(context)
+        .getUserSubscriptionsdate(SharePref().getUser()!.id!)
+        .then((value) {
+      usersubscriptionbydateResponse = value;
+      setState(() {});
+      return value;
+    });
+  }
 }

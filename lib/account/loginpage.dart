@@ -29,23 +29,17 @@ class _LoginPageState extends State<LoginPage> {
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
       loading = true;
-      setState(() {
+      setState(() {});
 
-      });
-
-      ApiProvider(context).userlogin(
-          LoginRequest(email: _email, password: _password)).then((value) {
+      ApiProvider(context)
+          .userlogin(LoginRequest(email: _email, password: _password))
+          .then((value) {
         if (value.status!) {
-
-
-
-             SharePref().setUser(value.result!);
-             GoRouter.of(context).pushReplacementNamed(RouteNames.homepage);
-
-
+          SharePref().setUser(value.result!);
+          GoRouter.of(context).pushReplacementNamed(RouteNames.homepage);
         } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(value.message.toString())));
+          ScaffoldMessenger.of(context)
+              .showSnackBar(SnackBar(content: Text(value.message.toString())));
         }
         setState(() {
           loading = false;
@@ -72,9 +66,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery
-        .of(context)
-        .size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(''),
@@ -85,14 +77,16 @@ class _LoginPageState extends State<LoginPage> {
             padding: EdgeInsets.symmetric(vertical: 50, horizontal: 16),
             child: Column(
               children: [
-
                 Lottie.asset('assets/wash.json'),
 
                 Padding(
                   padding: const EdgeInsets.only(left: 16),
-                  child: Align(alignment: Alignment.centerLeft,
-                      child: Text("Login to Your Account",
-                        style: GoogleFonts.poppins(fontSize: 18),)),
+                  child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Login to Your Account",
+                        style: GoogleFonts.poppins(fontSize: 18),
+                      )),
                 ),
                 Form(
                   key: _formKey,
@@ -109,7 +103,6 @@ class _LoginPageState extends State<LoginPage> {
                             border: OutlineInputBorder(),
                             filled: true,
                             fillColor: Colors.white38,
-
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey[400]!),
                             ),
@@ -117,7 +110,6 @@ class _LoginPageState extends State<LoginPage> {
                               borderSide: BorderSide(color: Colors.indigo),
                             ),
                             labelText: 'Email Id',
-
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -136,7 +128,6 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         SizedBox(height: 16.0),
                         TextFormField(
-
                           autovalidateMode: AutovalidateMode.onUserInteraction,
                           decoration: InputDecoration(
                             hintText: 'Enter your Password',
@@ -156,8 +147,9 @@ class _LoginPageState extends State<LoginPage> {
                             suffixIcon: GestureDetector(
                               onTap: _togglePasswordVisibility,
                               child: Icon(
-                                _isObscure ? Icons.visibility : Icons
-                                    .visibility_off,
+                                _isObscure
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
                               ),
                             ),
                           ),
@@ -177,59 +169,68 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         SizedBox(height: 16.0),
                         loading
-                            ? Center(child: CircularProgressIndicator(),)
+                            ? Center(
+                                child: CircularProgressIndicator(),
+                              )
                             : ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.indigo, elevation: 5.0),
-                          onPressed: _submitForm,
-
-                          child: SizedBox(width: Get.size.width * 0.4,
-                              child: Center(child: Text('Login',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 18, color: Colors.white)))),
-                        ),
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.indigo,
+                                    elevation: 5.0),
+                                onPressed: _submitForm,
+                                child: SizedBox(
+                                    width: Get.size.width * 0.4,
+                                    child: Center(
+                                        child: Text('Login',
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 18,
+                                                color: Colors.white)))),
+                              ),
                       ],
                     ),
                   ),
                 ).fadeIn(),
-                SizedBox(height: 40,),
+                SizedBox(
+                  height: 40,
+                ),
                 GestureDetector(
                   onTap: () {
-
                     context.pushNamed(RouteNames.signupPage);
-                 //   Get.to(() => SignupPage(), duration: const Duration(seconds: 2));
+                    //   Get.to(() => SignupPage(), duration: const Duration(seconds: 2));
                   },
-                  child: const Text.rich(TextSpan(
-                    text: "Don't Have an Account, ",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'Sign up',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                          color: Colors.indigo,
-                        ),
+                  child: const Text.rich(
+                    TextSpan(
+                      text: "Don't Have an Account, ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
-
-                    ],
-                  ),),
+                      children: [
+                        TextSpan(
+                          text: 'Sign up',
+                          style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            color: Colors.indigo,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                SizedBox(height: size.height * 0.02,),
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
                 // "Become a Partner" Button
                 ElevatedButton(
-
                   onPressed: () {
-                    Get.to(() => BecameaPattner(),
-                        duration: Duration(seconds: 2),
-                        curve: Curves.fastEaseInToSlowEaseOut);
+                    context.pushNamed(RouteNames.becamepatner);
+
+                    // Get.to(() => BecameaPattner(),
+                    //     duration: Duration(seconds: 2),
+                    //     curve: Curves.fastEaseInToSlowEaseOut);
                     // Handle "Become a Partner" button press
                   },
                   child: Text('Become a Partner ? '),
                 ),
-
               ],
             ),
           ),
@@ -240,11 +241,10 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    if (SharePref().getUser() !=null) {
+    if (SharePref().getUser() != null) {
       Future.delayed(Duration(milliseconds: 10), () {
         GoRouter.of(context).replaceNamed(RouteNames.homepage);
       });
-
 
       // TODO: implement initState
       super.initState();

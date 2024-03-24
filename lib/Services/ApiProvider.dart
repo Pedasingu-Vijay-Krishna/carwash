@@ -26,35 +26,37 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import '../homepage/user/cars/add_cars.dart';
 import '../models/CarsByUserId.dart';
 import '../models/UserAddresssResponse.dart';
-class ApiProvider implements RestClient{
 
+class ApiProvider implements RestClient {
   BuildContext context;
 
   Dio dio = Dio();
 
-  String url ="https://corgi-humane-completely.ngrok-free.app/api/v1/";
+  String url = "https://corgi-humane-completely.ngrok-free.app/api/v1/";
   ApiProvider(this.context);
 
   @override
   Future<LoginResponse> userlogin(LoginRequest loginRequest) {
-
-//     dio.interceptors.add(PrettyDioLogger());
-// // customization
-//     dio.interceptors.add(PrettyDioLogger(
-//         requestHeader: true,
-//         requestBody: true,
-//         responseBody: true,
-//         responseHeader: false,
-//         error: true,
-//         compact: true,
-//         maxWidth: 90));
+    dio.interceptors.add(PrettyDioLogger());
+// customization
+    dio.interceptors.add(PrettyDioLogger(
+        requestHeader: true,
+        requestBody: true,
+        responseBody: true,
+        responseHeader: false,
+        error: true,
+        compact: true,
+        maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.userlogin(loginRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .userlogin(loginRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -70,8 +72,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<LoginResponse> createlogin(UserRegisterRequest userRegisterRequest) {
-
-
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -84,11 +84,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.createlogin(userRegisterRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .createlogin(userRegisterRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -103,8 +106,8 @@ class ApiProvider implements RestClient{
   }
 
   @override
-  Future<CarCompanyModelResponse> getCarmodels(CarCompanyModelRequest carCompanyModelRequest) {
-
+  Future<CarCompanyModelResponse> getCarmodels(
+      CarCompanyModelRequest carCompanyModelRequest) {
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -117,11 +120,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getCarmodels(carCompanyModelRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getCarmodels(carCompanyModelRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -136,7 +142,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<CarCompanyResponse> getCars() {
-
 //
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
@@ -150,11 +155,11 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getCars().then((value) =>value).catchError((Object obj) {
+    return _resclient.getCars().then((value) => value).catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -169,8 +174,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<AddUserCarResponse> addUserCars(AddUserCarRequest addUserCarRequest) {
-
-
     dio.interceptors.add(PrettyDioLogger());
 // customization
     dio.interceptors.add(PrettyDioLogger(
@@ -183,11 +186,14 @@ class ApiProvider implements RestClient{
         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.addUserCars(addUserCarRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .addUserCars(addUserCarRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -202,8 +208,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<CarsByUserId> getUserCars(String id) {
-
-
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -216,11 +220,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getUserCars(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getUserCars(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -235,7 +242,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<AddAddresssResponse> addUserAddress(AddAddresss addAddresss) {
-
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -248,11 +254,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.addUserAddress(addAddresss).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .addUserAddress(addAddresss)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -267,7 +276,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<UserAddresssResponse> getUserAddreess(String id) {
-
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -280,11 +288,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getUserAddreess(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getUserAddreess(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -311,11 +322,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getSubscriptions().then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getSubscriptions()
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -329,8 +343,8 @@ class ApiProvider implements RestClient{
   }
 
   @override
-  Future<UsersubscriptionAddResponse> AddUserSubscriptions(UsersubscriptionAddRequest usersubscriptionAddRequest) {
-
+  Future<UsersubscriptionAddResponse> AddUserSubscriptions(
+      UsersubscriptionAddRequest usersubscriptionAddRequest) {
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -343,11 +357,13 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.AddUserSubscriptions(usersubscriptionAddRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient.AddUserSubscriptions(usersubscriptionAddRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -374,11 +390,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getUserSubscriptions(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getUserSubscriptions(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -393,7 +412,6 @@ class ApiProvider implements RestClient{
 
   @override
   Future<UsersubscriptionbydateResponse> getUserSubscriptionsdate(String id) {
-
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -406,11 +424,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getUserSubscriptionsdate(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getUserSubscriptionsdate(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -424,8 +445,8 @@ class ApiProvider implements RestClient{
   }
 
   @override
-  Future<UserBookingResponse> NewBooking(UserBookingRequest userBookingRequest) {
-
+  Future<UserBookingResponse> NewBooking(
+      UserBookingRequest userBookingRequest) {
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -438,11 +459,13 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.NewBooking(userBookingRequest).then((value) =>value).catchError((Object obj) {
+    return _resclient.NewBooking(userBookingRequest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -469,11 +492,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.bookingbyUserId(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .bookingbyUserId(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -500,11 +526,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.bookingorderId(id).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .bookingorderId(id)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -518,8 +547,11 @@ class ApiProvider implements RestClient{
   }
 
   @override
-  Future<String> bookingstarted(List<MultipartFile> files, String status, List<CompyModel> startime,) {
-
+  Future<String> bookingstarted(
+    List<MultipartFile> files,
+    String status,
+    List<CompyModel> startime,
+  ) {
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -532,11 +564,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.bookingstarted(files,status,startime).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .bookingstarted(files, status, startime)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -544,13 +579,13 @@ class ApiProvider implements RestClient{
         default:
           break;
       }
-    });   // TODO: implement bookingstarted
+    }); // TODO: implement bookingstarted
     throw UnimplementedError();
   }
 
   @override
-  Future<OrderByBetweendatesResponse> getOrderByDates(OrderByBetweendatesResquest orderByBetweendatesResquest) {
-
+  Future<OrderByBetweendatesResponse> getOrderByDates(
+      OrderByBetweendatesResquest orderByBetweendatesResquest) {
 //     dio.interceptors.add(PrettyDioLogger());
 // // customization
 //     dio.interceptors.add(PrettyDioLogger(
@@ -563,11 +598,14 @@ class ApiProvider implements RestClient{
 //         maxWidth: 90));
     final _resclient = RestClient(dio);
 
-    return  _resclient.getOrderByDates(orderByBetweendatesResquest).then((value) =>value).catchError((Object obj) {
+    return _resclient
+        .getOrderByDates(orderByBetweendatesResquest)
+        .then((value) => value)
+        .catchError((Object obj) {
       // non-200 error goes here.
       switch (obj.runtimeType) {
         case DioException:
-        // Here's the sample to get the failed response error code and message
+          // Here's the sample to get the failed response error code and message
           final res = (obj as DioException).response;
 
           debugPrint("Got error : ${res!.statusCode} -> ${res.statusMessage}");
@@ -580,5 +618,4 @@ class ApiProvider implements RestClient{
     // TODO: implement getOrderByDates
     throw UnimplementedError();
   }
-
 }

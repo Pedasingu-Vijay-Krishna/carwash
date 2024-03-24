@@ -1,5 +1,3 @@
-
-
 import 'dart:convert';
 
 import 'package:carwash/models/AddAddresss.dart';
@@ -32,69 +30,85 @@ import '../models/LoginResponse.dart';
 import '../models/UsersubscriptionbydateResponse.dart';
 
 part 'RestClient.g.dart';
+
 @RestApi(baseUrl: "https://corgi-humane-completely.ngrok-free.app/api/v1/")
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
-
   @POST("user/userLogin")
   Future<LoginResponse> userlogin(@Body() LoginRequest loginRequest);
 
-
   @POST("user/createUser")
-  Future<LoginResponse> createlogin(@Body() UserRegisterRequest userRegisterRequest);
+  Future<LoginResponse> createlogin(
+      @Body() UserRegisterRequest userRegisterRequest);
 
   @GET("/cars/carModel")
-  Future<CarCompanyModelResponse> getCarmodels(@Body() CarCompanyModelRequest carCompanyModelRequest);
+  Future<CarCompanyModelResponse> getCarmodels(
+      @Body() CarCompanyModelRequest carCompanyModelRequest);
 
   @GET("/cars/carCompany")
   Future<CarCompanyResponse> getCars();
 
   @POST("/userCars/addUserCar")
-  Future<AddUserCarResponse> addUserCars(@Body() AddUserCarRequest addUserCarRequest);
+  Future<AddUserCarResponse> addUserCars(
+      @Body() AddUserCarRequest addUserCarRequest);
 
   @GET("/userCars/UserCars/{id}")
-  Future<CarsByUserId> getUserCars(@Path() String id,);
+  Future<CarsByUserId> getUserCars(
+    @Path() String id,
+  );
 
- @GET("/userAddress/UserAddress/{id}")
-  Future<UserAddresssResponse> getUserAddreess(@Path() String id,);
+  @GET("/userAddress/UserAddress/{id}")
+  Future<UserAddresssResponse> getUserAddreess(
+    @Path() String id,
+  );
 
   @POST("/userAddress/addUserAddress")
   Future<AddAddresssResponse> addUserAddress(@Body() AddAddresss addAddresss);
-
 
   @POST("/subscritions/getsubscription")
   Future<SubscriptionResponse> getSubscriptions();
 
   @POST("/usersubscription/getsubscription/{id}")
-  Future<UsersubscriptionresultbuuId> getUserSubscriptions(@Path() String id,);
+  Future<UsersubscriptionresultbuuId> getUserSubscriptions(
+    @Path() String id,
+  );
 
   @POST("/usersubscription/getsubscriptionbyDate/{id}")
-  Future<UsersubscriptionbydateResponse> getUserSubscriptionsdate(@Path() String id,);
+  Future<UsersubscriptionbydateResponse> getUserSubscriptionsdate(
+    @Path() String id,
+  );
 
   @POST("/usersubscription/addsubscription")
-  Future<UsersubscriptionAddResponse> AddUserSubscriptions(@Body() UsersubscriptionAddRequest usersubscriptionAddRequest);
+  Future<UsersubscriptionAddResponse> AddUserSubscriptions(
+      @Body() UsersubscriptionAddRequest usersubscriptionAddRequest);
 
   @POST("/orders/userOrder")
-  Future<UserBookingResponse> NewBooking(@Body() UserBookingRequest userBookingRequest);
-
+  Future<UserBookingResponse> NewBooking(
+      @Body() UserBookingRequest userBookingRequest);
 
   @POST("/orders/bookingsbyUserId")
-  Future<OrderByBetweendatesResponse> getOrderByDates(@Body() OrderByBetweendatesResquest orderByBetweendatesResquest);
+  Future<OrderByBetweendatesResponse> getOrderByDates(
+      @Body() OrderByBetweendatesResquest orderByBetweendatesResquest);
 
   @GET("/orders/orderbyId/{id}")
-  Future<UserBookingByOrderIdResponse> bookingorderId(@Path() String id,);
+  Future<UserBookingByOrderIdResponse> bookingorderId(
+    @Path() String id,
+  );
 
   @GET("/orders/ordersbyUserId/{id}")
-  Future<UserBookingByUserIdResponse> bookingbyUserId(@Path() String id,);
+  Future<UserBookingByUserIdResponse> bookingbyUserId(
+    @Path() String id,
+  );
 
   @POST("/cars/carCompany")
   @MultiPart()
   Future<String> bookingstarted(
-      @Part(name: "carlogos",) List<MultipartFile> files,
-      @Part(name: "carcompany") String status,
-      @Part(name: "carModel") List<CompyModel> startime,
-
-      );
-
+    @Part(
+      name: "carlogos",
+    )
+    List<MultipartFile> files,
+    @Part(name: "carcompany") String status,
+    @Part(name: "carModel") List<CompyModel> startime,
+  );
 }

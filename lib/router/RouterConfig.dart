@@ -1,6 +1,6 @@
-
 import 'dart:developer';
 
+import 'package:carwash/account/becameapattner.dart';
 import 'package:carwash/account/loginpage.dart';
 import 'package:carwash/homepage/Coomingsoom.dart';
 import 'package:carwash/homepage/serviceDetailPage.dart';
@@ -21,41 +21,46 @@ import '../homepage/user/subscriptions/details_subscritions.dart';
 import '../homepage/user/useehomePage.dart';
 import 'RoteName.dart';
 
- GoRouter router = GoRouter(
+GoRouter router = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return  LoginPage();
+        return LoginPage();
       },
       routes: <RouteBase>[
         GoRoute(
           name: RouteNames.login,
           path: 'login',
           builder: (BuildContext context, GoRouterState state) {
-
-            return  LoginPage();
+            return LoginPage();
           },
-        ),  GoRoute(
+        ),
+        GoRoute(
+          name: RouteNames.becamepatner,
+          path: 'becamepatner',
+          builder: (BuildContext context, GoRouterState state) {
+            return BecameaPattner();
+          },
+        ),
+        GoRoute(
           name: RouteNames.signupPage,
           path: 'signupPage',
           builder: (BuildContext context, GoRouterState state) {
-
-            return  SignupPage();
+            return SignupPage();
           },
-        ),  GoRoute(
+        ),
+        GoRoute(
           name: RouteNames.Addcars,
           path: 'Addcars',
           builder: (BuildContext context, GoRouterState state) {
-
-            return  Addcars();
+            return Addcars();
           },
         ),
         GoRoute(
           name: RouteNames.homepage,
           path: 'homepage',
           builder: (BuildContext context, GoRouterState state) {
-
             return const UserHome();
           },
         ),
@@ -63,78 +68,78 @@ import 'RoteName.dart';
           name: RouteNames.service,
           path: 'servicePage',
           builder: (BuildContext context, GoRouterState state) {
-            return  ServicesPage();
+            return ServicesPage();
           },
         ),
         GoRoute(
           name: RouteNames.commingsoon,
           path: 'commingsoon',
           builder: (BuildContext context, GoRouterState state) {
-            return  ComingSoonPage(true);
+            return ComingSoonPage(true);
           },
         ),
-
         GoRoute(
           name: RouteNames.ServiceSummary,
           path: 'ServiceSummary',
           builder: (BuildContext context, GoRouterState state) {
-            return  ServiceSummary();
+            return ServiceSummary();
           },
         ),
         GoRoute(
           name: RouteNames.UserDetails,
           path: 'UserDetails',
           builder: (BuildContext context, GoRouterState state) {
-            return  UserDetails();
+            return UserDetails();
           },
-        ),    GoRoute(
+        ),
+        GoRoute(
           name: RouteNames.DeatilsSubscrition,
           path: 'DeatilsSubscrition',
           builder: (BuildContext context, GoRouterState state) {
-            return  DeatilsSubscrition();
+            return DeatilsSubscrition();
           },
         ),
-
         GoRoute(
           name: RouteNames.Carslist,
           path: 'Carslist',
           builder: (BuildContext context, GoRouterState state) {
-            return  Carslist();
+            return Carslist();
           },
         ),
-
-   GoRoute(
+        GoRoute(
           name: RouteNames.AddAddress,
           path: 'AddAddress',
           builder: (BuildContext context, GoRouterState state) {
-            return  AddAddress();
+            return AddAddress();
           },
         ),
-   GoRoute(
+        GoRoute(
           name: RouteNames.Useraddress,
           path: 'userAddres',
           builder: (BuildContext context, GoRouterState state) {
-            return  UserAddress();
+            return UserAddress();
           },
         ),
-   GoRoute(
+        GoRoute(
           name: RouteNames.HistoryPage,
           path: 'HistoryPage',
           builder: (BuildContext context, GoRouterState state) {
-            return  HistoryPage();
+            return HistoryPage();
           },
         ),
-
         GoRoute(
           name: RouteNames.serviceDetails,
           path: 'servicedetails',
           builder: (BuildContext context, GoRouterState state) {
-
-            return ServiceDetails(id:  state.uri.queryParameters['id']!,servicename:  state.uri.queryParameters['servicename']!,);
+            return ServiceDetails(
+              id: state.uri.queryParameters['id']!,
+              servicename: state.uri.queryParameters['servicename']!,
+            );
           },
         ),
       ],
     ),
   ],
-  errorBuilder: (context, state) => Scaffold(body: Center(child: Text(state.error.toString()))),
+  errorBuilder: (context, state) =>
+      Scaffold(body: Center(child: Text(state.error.toString()))),
 );
